@@ -18,6 +18,8 @@ h1 {
 
 p {
     color: rgb(0, 83, 139);
+    font-size: large;
+    text-align: center;
 }
 
 a {
@@ -31,3 +33,4 @@ ul {
 ol {
     list-style: lower-alpha;
 }
+
