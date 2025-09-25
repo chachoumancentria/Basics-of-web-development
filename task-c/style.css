@@ -1,6 +1,6 @@
 /*
 Author: Nassim Boudekhani
-Date: 2025-09-19
+Date: 2025-09-25
 */
 
 body {
@@ -34,3 +34,15 @@ ol {
     list-style: lower-alpha;
 }
 
+
+img {
+    width: 80%;
+    max-width: fit-content;
+    height: 80%;
+}
+
+audio, video {
+    width: 80%;
+    display: block;
+    margin:auto;
+}
