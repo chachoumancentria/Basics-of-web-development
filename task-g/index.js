@@ -1,7 +1,6 @@
 // index.js
 // Author: Nassim Boudekhani
-// Date: 2025-10-30
-// Handles adding new course rows with day marks (✅/❌)
+// Date: 2025-11-04
 
 document.addEventListener("DOMContentLoaded", () => {
 	const form = document.getElementById("addRowForm");
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		event.preventDefault();
 
 		// Automatic time stamp
-		timeStamp.value = new Date();
+		const timeStamp = new Date();
 
 		// Full name needs both first name AND last name
 		const fullName = nameInput.value.trim();
@@ -98,35 +97,36 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("dateError").innerHTML = "";
 
 
-		return;
+
+        // Append the Data to new row
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = fullName;
+        row.appendChild(nameCell);
+
+        const emailCell = document.createElement("td");
+        emailCell.textContent = email;
+        row.appendChild(emailCell);
+
+        const telCell = document.createElement("td");
+        telCell.textContent = phone;
+        row.appendChild(telCell);
+
+        const birthdateCell = document.createElement("td");
+        birthdateCell.textContent = birth;
+        row.appendChild(birthdateCell);
+
+        const timeStampCell = document.createElement("td");
+        timeStampCell.textContent = timeStamp;
+        row.appendChild(timeStampCell);
 
 
-
-
-
-		// Collect checked days into a Set
-
-		// Create new table row
-		const row = document.createElement("tr");
-
-		// Course cell
-		const nameCell = document.createElement("td");
-		nameCell.textContent = courseName;
-		row.appendChild(nameCell);
-
-		// Day cells
-		dayOrder.forEach((day) => {
-			const cell = document.createElement("td");
-			cell.textContent = checkedDays.has(day) ? CHECK : CROSS;
-			cell.dataset.day = day;
-			cell.className = "day-cell";
-			row.appendChild(cell);
-		});
-
-		table.appendChild(row);
+        table.appendChild(row);
 
 		// Reset form and focus
-		form.reset();
-		courseInput.focus();
+
+		// form.reset();
+		nameInput.focus();
 	});
 });

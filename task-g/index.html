@@ -1,6 +1,6 @@
 <!--
     Author: Nassim Boudekhani
-    Date: 2025-14-04
+    Date: 2025-11-04
 -->
 
 <!doctype html>
@@ -28,12 +28,10 @@
 				</section>
 
 				<!-- Controls (70%): add course + day marks -->
-				<section class="controls" aria-label="Add course row">
+				<section class="controls" aria-label="Add data row">
 					<h2 class="controls-title">Add Course</h2>
 
 					<form id="addRowForm">
-						<input id="timeStamp" name="timeStamp" type="datetime-local" hidden />
-
 						<div class="form-row">
 							<label for="fullName">Full Name</label>
 							<input id="fullName" name="fullName" type="text" required placeholder="Nassim Boudekhani" />
@@ -53,7 +51,7 @@
 						</div>
 
 						<div class="form-row">
-							<label for date>Birth date </label>
+							<label for="date">Birth date </label>
 							<input id="date" name="date" type="date" required />
 							<p class="error" id="dateError"></p>
 						</div>
