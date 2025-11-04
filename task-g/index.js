@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         row.appendChild(birthdateCell);
 
         const timeStampCell = document.createElement("td");
-        timeStampCell.textContent = timeStamp;
+        timeStampCell.textContent = timeStamp.toGMTString();
         row.appendChild(timeStampCell);
 
 
