@@ -12,11 +12,18 @@ Date: 2025-11-04
    - Borders: light gray (  #d0d7e2)
 */
 
+@import "tailwindcss";
+
+
+@theme {
+	--color-white: #f6f8fb;
+}
+
 :root {
 	--base-size: 1rem;
 	--h1-size: 1.6rem;
 
-	--page-bg: #f6f8fb;
+	--page-bg: var(--color-white);
 	--text: #1f2937;
 	--brand: #273e73;
 	--table-alt: #eef3ff;
