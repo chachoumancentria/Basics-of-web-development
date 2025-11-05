@@ -1,0 +1,86 @@
+<!--
+    Author: Nassim Boudekhani
+    Date: 2025-11-04
+-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Weekly Timetable</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="index.js"></script>
+	</head>
+
+	<body>
+		<header class="site-header">
+			<h1>Registeration page</h1>
+		</header>
+
+		<main class="content">
+			<!-- Top row split into two blocks -->
+			<div class="top-grid">
+				<!-- Student info (30%) -->
+				<section class="student-info" aria-label="Student information">
+					<h2 class="student-info-title">Information</h2>
+					<p><span class="student-name">Nassim Boudekhani</span></p>
+					<p><span class="student-group">Exchange Student</span></p>
+				</section>
+
+				<!-- Controls (70%): add course + day marks -->
+				<section class="controls" aria-label="Add data row">
+					<h2 class="controls-title">Add Course</h2>
+
+					<form id="addRowForm">
+						<div class="form-row">
+							<label for="fullName">Full Name</label>
+							<input id="fullName" name="fullName" type="text" required placeholder="Nassim Boudekhani" />
+							<p class="error" id="nameError"></p>
+						</div>
+
+						<div class="form-row">
+							<label for="email">Email</label>
+							<input id="email" name="email" type="text" required placeholder="nassim.boudekhani@centria.fi" />
+							<p class="error" id="emailError"></p>
+						</div>
+
+						<div class="form-row">
+							<label for="tel">Phone Number</label>
+							<input id="tel" name="tel" type="tel" required placeholder="+358 12345678" />
+							<p class="error" id="telError"></p>
+						</div>
+
+						<div class="form-row">
+							<label for="date">Birth date </label>
+							<input id="date" name="date" type="date" required />
+							<p class="error" id="dateError"></p>
+						</div>
+
+						<input id="terms" type="checkbox" required /><label for="terms"> I agree to the <a>Terms & Conditions</a></label>
+
+						<div class="form-row">
+							<button id="addRowBtn" type="submit" class="btn">Add row</button>
+							<button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
+						</div>
+					</form>
+				</section>
+			</div>
+
+			<!-- Table -->
+			<div class="table-wrap">
+				<table class="table" id="timetable">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Phone Number</th>
+							<th>Birth date</th>
+							<th>Sumbission time stamp</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</main>
+	</body>
+</html>
