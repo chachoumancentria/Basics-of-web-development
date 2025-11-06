@@ -27,14 +27,7 @@ Date: 2025-11-04
 	--radius: 8px;
 }
 
-.student-info p {
-	margin: 0;
-}
-
-.student-info p + p {
-	margin-top: 0.5rem;
-}
-
+/*
 .controls-title,
 .student-info-title {
 	margin: 0 0 0.5rem 0;
@@ -94,7 +87,7 @@ Date: 2025-11-04
 	background: #ffffff;
 }
 
-/* Table container */
+/* Table container *
 .table-wrap {
 	background: #fff;
 	border: 1px solid var(--border);
@@ -104,14 +97,14 @@ Date: 2025-11-04
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* Table */
+/* Table *
 .table {
 	width: 100%;
 	border-collapse: collapse;
 	font-size: 1rem;
 }
 
-/* Header cells */
+/* Header cells *
 .table thead th {
 	background: var(--brand);
 	color: #fff;
@@ -120,25 +113,25 @@ Date: 2025-11-04
 	border-bottom: 1px solid var(--border);
 }
 
-/* Body cells */
+/* Body cells *
 .table tbody td {
 	padding: 0.6rem 0.75rem;
 	border-bottom: 1px solid var(--border);
 }
 
-/* Alternate row color */
+/* Alternate row color *
 .table tbody tr:nth-child(even) {
 	background: var(--table-alt);
 }
 
-/* Column widths: 40% + 12%*5 = 100% */
+/* Column widths: 40% + 12%*5 = 100% *
 .table thead th,
 .table tbody td {
 	width: 20%;
 	text-align: center;
 }
 
-/* Small screens: stack the top blocks */
+/* Small screens: stack the top blocks *
 @media (max-width: 860px) {
 	.content {
 		margin-left: 5%;
@@ -150,7 +143,7 @@ Date: 2025-11-04
 	}
 }
 
-/* ≤ 768px: margins 5% */
+/* ≤ 768px: margins 5% *
 @media (max-width: 768px) {
 	.content {
 		margin-left: 5%;
@@ -169,7 +162,7 @@ Date: 2025-11-04
 	}
 }
 
-/* ≤ 640px: margins 1%, show only the table */
+/* ≤ 640px: margins 1%, show only the table *
 @media (max-width: 640px) {
 	.content {
 		margin-left: 1%;
