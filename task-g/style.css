@@ -118,6 +118,13 @@ body {
 	border-radius: 6px;
 }
 
+.form-row input[type="tel"] {
+	flex: 1 1 auto;
+	padding: 0.45rem 0.6rem;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+}
+
 .form-row input[type="date"] {
 	flex: 1 1 auto;
 	padding: 0.45rem 0.6rem;
@@ -246,4 +253,5 @@ body {
 
 .error {
 	color: red;
+	font-size: calc(0.8*var(--base-size));
 }

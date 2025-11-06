@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const phone = phoneInput.value.trim();
 		if (!phone) {
 			document.getElementById("telError").innerHTML = "Please enter your phone number";
-			console.warn("WARNING: No email was given");
+			console.warn("WARNING: No phone number was given");
 			return;
 		}
 		if (phone.length < 8) {
@@ -109,6 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	emailInput.addEventListener("input", checkEmailInput);
 	phoneInput.addEventListener("input", checkPhoneInput);
 	dateInput.addEventListener("input", checkDateInput);
+
+
+	// remove unwanted characters from the tel input
+	phoneInput.addEventListener("input", () => {
+		const filteredPhoneNumber = phoneInput.value.replace(/[^+0-9]/g, "");
+		phoneInput.value = filteredPhoneNumber;
+	});
 
 	form.addEventListener("submit", (event) => {
 		event.preventDefault();
