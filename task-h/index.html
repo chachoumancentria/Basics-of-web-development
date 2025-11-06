@@ -7,30 +7,30 @@
 <html lang="en" class="h-full">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Custom registeration form</title>
+		<title>Custom registration form</title>
 		<link rel="stylesheet" href="style.css" />
 		<script src="index.js"></script>
 	</head>
 
-	<body class="h-full m-0 bg-(--page-bg) font-sans text-(--base-size)">
+	<body class="h-full m-0 bg-neutral-100 font-sans text-md">
 		<header class="site-header pt-[2rem] pb-[1rem] bg-(--brand) text-white text-lg text-center">
 			<h1 class="text-white text-3xl text-center font-bold">Registeration page</h1>
 		</header>
 
-		<main class="content">
+		<main class="content ml-[15%] mr-[15%] pt-[2rem] pb-[1rem]">
 			<!-- Top row split into two blocks -->
-			<div class="top-grid">
+			<div class="top-grid flex gap-4 mb-4">
 				<!-- Student info (30%) -->
-				<section class="student-info" aria-label="Student information">
-					<h2 class="student-info-title">Information</h2>
+				<section class="student-info bg-white border rounded border-neutral-200 shadow-md p-3 basis-1/4" aria-label="Student information">
+					<h2 class="student-info-title font-bold">Information</h2>
 					<p><span class="student-name">Nassim Boudekhani</span></p>
 					<p><span class="student-name">Joseph Couprie</span></p>
 					<p><span class="student-group">Exchange Student</span></p>
 				</section>
 
 				<!-- Controls (70%) -->
-				<section class="controls" aria-label="Add data row">
-					<h2 class="controls-title">Add Personal Info</h2>
+				<section class="controls bg-white border rounded border-neutral-200 shadow-md p-3 basis-3/4" aria-label="Add data row">
+					<h2 class="controls-title font-bold">Add Personal Info</h2>
 
 					<form id="addRowForm">
 						<div class="form-row">
@@ -41,7 +41,7 @@
 
 						<div class="form-row">
 							<label for="email">Email</label>
-							<input id="email" name="email" type="text" required placeholder="nassim.boudekhani@centria.fi" />
+							<input id="email" name="email" type="text" required placeholder="joseph.couprie@centria.fi" />
 							<p class="error" id="emailError"></p>
 						</div>
 
