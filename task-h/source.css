@@ -1,5 +1,5 @@
 /*
-Author: Nassim Boudekhani
+Author: Nassim Boudekhani & Joseph Couprie
 Date: 2025-11-04
 */
 
@@ -25,6 +25,17 @@ Date: 2025-11-04
 	--border: #d0d7e2;
 
 	--radius: 8px;
+}
+
+/* Body cells */
+.table tbody td {
+	padding: 0.6rem 0.75rem;
+	border-bottom: 1px solid var(--border);
+}
+
+/* Alternate row color */
+.table tbody tr:nth-child(even) {
+	background: var(--table-alt);
 }
 
 /*
@@ -113,16 +124,6 @@ Date: 2025-11-04
 	border-bottom: 1px solid var(--border);
 }
 
-/* Body cells *
-.table tbody td {
-	padding: 0.6rem 0.75rem;
-	border-bottom: 1px solid var(--border);
-}
-
-/* Alternate row color *
-.table tbody tr:nth-child(even) {
-	background: var(--table-alt);
-}
 
 /* Column widths: 40% + 12%*5 = 100% *
 .table thead th,
@@ -177,3 +178,4 @@ Date: 2025-11-04
 .error {
 	color: red;
 }
+*/
