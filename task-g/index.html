@@ -31,7 +31,7 @@
 				<section class="controls" aria-label="Add data row">
 					<h2 class="controls-title">Add Personal Info</h2>
 
-					<form id="addRowForm">
+					<form id="addRowForm" novalidate>
 						<div class="form-row">
 							<label for="fullName">Full Name</label>
 							<input id="fullName" name="fullName" type="text" required placeholder="Nassim Boudekhani" />
@@ -46,7 +46,7 @@
 
 						<div class="form-row">
 							<label for="tel">Phone Number</label>
-							<input id="tel" name="tel" type="tel" required placeholder="+358 12345678" pattern="[+0-9]"/>
+							<input id="tel" name="tel" type="tel" required placeholder="+358 12345678" />
 							<p class="error" id="telError"></p>
 						</div>
 
@@ -56,7 +56,10 @@
 							<p class="error" id="dateError"></p>
 						</div>
 
-						<input id="terms" type="checkbox" required /><label for="terms"> I agree to the <a>Terms & Conditions</a></label>
+						<div class="form-row">
+							<input id="terms" type="checkbox" required /><label for="terms"> I agree to the <a>Terms & Conditions</a></label>
+							<p class="error" id="termsError"></p>
+						</div>
 
 						<div class="form-row">
 							<button id="addRowBtn" type="submit" class="btn">Add row</button>

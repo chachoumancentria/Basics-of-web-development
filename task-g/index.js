@@ -11,31 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
 	const emailInput = document.getElementById("email");
 	const phoneInput = document.getElementById("tel");
 	const dateInput = document.getElementById("date");
+	const termsAccepted = document.getElementById("terms");
 
 	function checkNameInput() {
 		const fullName = nameInput.value.trim();
 		if (!fullName) {
 			document.getElementById("nameError").innerHTML = "Please enter your name";
 			console.warn("WARNING: No name was given");
-			return;
+			nameInput.focus();
+			return false
 		}
 		if (!fullName.includes(" ")) {
 			document.getElementById("nameError").innerHTML = "Please enter your first name, and last name";
 			console.warn("WARNING: Full name must contain two parts");
-			return;
+			nameInput.focus();
+			return false
 		}
 		if (fullName.split(" ")[0].length < 2) {
 			document.getElementById("nameError").innerHTML = "Your first name should be more than 2 letters";
 			console.warn("WARNING: First name should be more than 2 letters");
-			return;
+			nameInput.focus();
+			return false
 		}
 		if (fullName.split(" ")[fullName.split(" ").length - 1].length < 2) {
 			document.getElementById("nameError").innerHTML = "Your last name should be more than 2 letters";
 			console.warn("WARNING: Last name should be more than 2 letters");
-			return;
+			nameInput.focus();
+			return false
 		}
 		console.info("INFO: Full name was correctly given");
 		document.getElementById("nameError").innerHTML = "";
+		return true;
 	}
 
 	function checkEmailInput() {
@@ -43,17 +49,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (!email) {
 			document.getElementById("emailError").innerHTML = "Please enter your email";
 			console.warn("WARNING: No email was given");
-			return;
+			emailInput.focus();
+			return false
 		}
 		const emailComponents = email.split("@");
 		// verify if the email follows the XXX@XXX.XX pattern
 		if (!email.includes("@") || !emailComponents[emailComponents.length - 1].includes(".")) {
 			document.getElementById("emailError").innerHTML = "Please enter a valid email";
 			console.warn("WARNING: Full name must contain two parts");
-			return;
+			emailInput.focus();
+			return false
 		}
 		console.info("INFO: Email was correctly given");
 		document.getElementById("emailError").innerHTML = "";
+		return true;
 	}
 
 	function checkPhoneInput() {
@@ -61,25 +70,30 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (!phone) {
 			document.getElementById("telError").innerHTML = "Please enter your phone number";
 			console.warn("WARNING: No phone number was given");
-			return;
+			phoneInput.focus();
+			return false
 		}
 		if (phone.length < 8) {
 			document.getElementById("telError").innerHTML = "The phone number is too short";
 			console.warn("WARNING: Invalid phone number: too short");
-			return;
+			phoneInput.focus();
+			return false
 		}
 		if (phone.length > 16) {
 			document.getElementById("telError").innerHTML = "The phone number is too long";
 			console.warn("WARNING: Invalid phone number: too long");
-			return;
+			phoneInput.focus();
+			return false
 		}
 		if (phone.length == 16 && phone[0] != "+") {
 			document.getElementById("telError").innerHTML = "The phone number is too long";
 			console.warn("WARNING: Invalid phone number: too long");
-			return;
+			phoneInput.focus();
+			return false
 		}
 		console.info("INFO: Phone number was correctly given");
 		document.getElementById("telError").innerHTML = "";
+		return true;
 	}
 
 	function checkDateInput() {
@@ -87,21 +101,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (!birth) {
 			document.getElementById("dateError").innerHTML = "Please enter a birth date";
 			console.warn("WARNING: No birth date was given");
-			return;
+			dateInput.focus();
+			return false
 		}
 		const dateComponents = birth.split("-").map((x) => parseInt(x));
 		if (dateComponents[0] < 1900) {
 			document.getElementById("dateError").innerHTML = "Please enter a real birth date";
 			console.warn("WARNING: Birth date is not real");
-			return;
+			dateInput.focus();
+			return false
 		}
 		if (dateComponents[0] > new Date().getFullYear() - 13) {
 			document.getElementById("dateError").innerHTML = "You are too young to use the website";
 			console.warn("WARNING: User is too young");
-			return;
+			dateInput.focus();
+			return false
 		}
 		console.info("INFO: Birth date was correctly given");
 		document.getElementById("dateError").innerHTML = "";
+		return true;
 	}
 
 	// Verify the input on each modification
@@ -124,34 +142,49 @@ document.addEventListener("DOMContentLoaded", () => {
 		const timeStamp = new Date();
 
 		// Full name needs both first name AND last name
-		checkNameInput();
+		if (!checkNameInput()) {
+			return;
+		}
 
 		// email must have "@" and "."
-		checkEmailInput();
+		if (!checkEmailInput()) {
+			return;
+		}
 
 		// Phone number must be of length 8 < < 15
-		checkPhoneInput();
+		if (!checkPhoneInput()) {
+			return;
+		}
 
 		// Date of birth must be between 1900 (125 years old) and 13 years ago (French regulation)
-		checkDateInput();
+		if (!checkDateInput()) {
+			return;
+		}
+
+		// Verify terms acceptance
+		if (!termsAccepted.checked) {
+			document.getElementById("termsError").innerHTML = "Accept the Terms of Service to continue";
+			console.warn("WARNING: Terms of Service must be accepted");
+			return;
+		}
 
 		// Append the Data to new row
 		const row = document.createElement("tr");
 
 		const nameCell = document.createElement("td");
-		nameCell.textContent = fullName;
+		nameCell.textContent = nameInput.value.trim();
 		row.appendChild(nameCell);
 
 		const emailCell = document.createElement("td");
-		emailCell.textContent = email;
+		emailCell.textContent = emailInput.value.trim();
 		row.appendChild(emailCell);
 
 		const telCell = document.createElement("td");
-		telCell.textContent = phone;
+		telCell.textContent = phoneInput.value;
 		row.appendChild(telCell);
 
 		const birthdateCell = document.createElement("td");
-		birthdateCell.textContent = birth;
+		birthdateCell.textContent = dateInput.value;
 		row.appendChild(birthdateCell);
 
 		const timeStampCell = document.createElement("td");
