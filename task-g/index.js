@@ -19,25 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("nameError").innerHTML = "Please enter your name";
 			console.warn("WARNING: No name was given");
 			nameInput.focus();
-			return false
+			return false;
 		}
 		if (!fullName.includes(" ")) {
 			document.getElementById("nameError").innerHTML = "Please enter your first name, and last name";
 			console.warn("WARNING: Full name must contain two parts");
 			nameInput.focus();
-			return false
+			return false;
 		}
 		if (fullName.split(" ")[0].length < 2) {
 			document.getElementById("nameError").innerHTML = "Your first name should be more than 2 letters";
 			console.warn("WARNING: First name should be more than 2 letters");
 			nameInput.focus();
-			return false
+			return false;
 		}
 		if (fullName.split(" ")[fullName.split(" ").length - 1].length < 2) {
 			document.getElementById("nameError").innerHTML = "Your last name should be more than 2 letters";
 			console.warn("WARNING: Last name should be more than 2 letters");
 			nameInput.focus();
-			return false
+			return false;
 		}
 		console.info("INFO: Full name was correctly given");
 		document.getElementById("nameError").innerHTML = "";
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("emailError").innerHTML = "Please enter your email";
 			console.warn("WARNING: No email was given");
 			emailInput.focus();
-			return false
+			return false;
 		}
 		const emailComponents = email.split("@");
 		// verify if the email follows the XXX@XXX.XX pattern
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("emailError").innerHTML = "Please enter a valid email";
 			console.warn("WARNING: Full name must contain two parts");
 			emailInput.focus();
-			return false
+			return false;
 		}
 		console.info("INFO: Email was correctly given");
 		document.getElementById("emailError").innerHTML = "";
@@ -71,25 +71,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("telError").innerHTML = "Please enter your phone number";
 			console.warn("WARNING: No phone number was given");
 			phoneInput.focus();
-			return false
+			return false;
 		}
 		if (phone.length < 8) {
 			document.getElementById("telError").innerHTML = "The phone number is too short";
 			console.warn("WARNING: Invalid phone number: too short");
 			phoneInput.focus();
-			return false
+			return false;
 		}
 		if (phone.length > 16) {
 			document.getElementById("telError").innerHTML = "The phone number is too long";
 			console.warn("WARNING: Invalid phone number: too long");
 			phoneInput.focus();
-			return false
+			return false;
 		}
 		if (phone.length == 16 && phone[0] != "+") {
 			document.getElementById("telError").innerHTML = "The phone number is too long";
 			console.warn("WARNING: Invalid phone number: too long");
 			phoneInput.focus();
-			return false
+			return false;
 		}
 		console.info("INFO: Phone number was correctly given");
 		document.getElementById("telError").innerHTML = "";
@@ -102,20 +102,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("dateError").innerHTML = "Please enter a birth date";
 			console.warn("WARNING: No birth date was given");
 			dateInput.focus();
-			return false
+			return false;
 		}
 		const dateComponents = birth.split("-").map((x) => parseInt(x));
 		if (dateComponents[0] < 1900) {
 			document.getElementById("dateError").innerHTML = "Please enter a real birth date";
 			console.warn("WARNING: Birth date is not real");
 			dateInput.focus();
-			return false
+			return false;
 		}
 		if (dateComponents[0] > new Date().getFullYear() - 13) {
 			document.getElementById("dateError").innerHTML = "You are too young to use the website";
 			console.warn("WARNING: User is too young");
 			dateInput.focus();
-			return false
+			return false;
 		}
 		console.info("INFO: Birth date was correctly given");
 		document.getElementById("dateError").innerHTML = "";
@@ -127,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	emailInput.addEventListener("input", checkEmailInput);
 	phoneInput.addEventListener("input", checkPhoneInput);
 	dateInput.addEventListener("input", checkDateInput);
-
 
 	// remove unwanted characters from the tel input
 	phoneInput.addEventListener("input", () => {
@@ -166,6 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("termsError").innerHTML = "Accept the Terms of Service to continue";
 			console.warn("WARNING: Terms of Service must be accepted");
 			return;
+		} else {
+			document.getElementById("termsError").innerHTML = "";
 		}
 
 		// Append the Data to new row
