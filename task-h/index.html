@@ -32,36 +32,47 @@
 				<section class="controls bg-white border rounded border-neutral-200 shadow-md p-3 basis-3/4" aria-label="Add data row">
 					<h2 class="controls-title font-bold">Add Personal Info</h2>
 
-					<form id="addRowForm">
+					<form id="addRowForm" novalidate>
 						<div class="form-row">
-							<label for="fullName">Full Name</label>
-							<input class="" id="fullName" name="fullName" type="text" required placeholder="Nassim Boudekhani" />
-							<p class="error" id="nameError"></p>
+							<div class="break-after-auto flex">
+								<label for="fullName" class="w-1/6">Full Name</label>
+								<input class="border rounded p-auto pl-1 mr-1 flex-1 border-neutral-300" id="fullName" name="fullName" type="text" required placeholder="Nassim Boudekhani" />
+							</div>
+							<p class="error ml-4 text-red-500" id="nameError"></p>
 						</div>
 
-						<div class="form-row">
-							<label for="email">Email</label>
-							<input id="email" name="email" type="text" required placeholder="joseph.couprie@centria.fi" />
-							<p class="error" id="emailError"></p>
+						<div class="form-row mt-3">
+							<div class="break-after-auto flex">
+								<label for="email" class="w-1/6">Email</label>
+								<input class="border rounded p-auto pl-1 mr-1 flex-1 border-neutral-300" id="email" name="email" type="text" required placeholder="joseph.couprie@centria.fi" />
+							</div>
+							<p class="error ml-4 text-red-500" id="emailError"></p>
 						</div>
 
-						<div class="form-row">
-							<label for="tel">Phone Number</label>
-							<input id="tel" name="tel" type="tel" required placeholder="+358 12345678" />
-							<p class="error" id="telError"></p>
+						<div class="form-row mt-3">
+							<div class="break-after-auto flex">
+								<label for="tel" class="w-1/6">Phone Number</label>
+								<input class="border rounded p-auto pl-1 mr-1 flex-1 border-neutral-300" id="tel" name="tel" type="tel" required placeholder="+358 12345678" />
+							</div>
+							<p class="error ml-4 text-red-500" id="telError"></p>
 						</div>
 
-						<div class="form-row">
-							<label for="date">Birth date </label>
-							<input id="date" name="date" type="date" required />
-							<p class="error" id="dateError"></p>
+						<div class="form-row mt-3">
+							<div class="break-after-auto flex">
+								<label for="date" class="w-1/6">Birth date </label>
+								<input class="border rounded p-auto pl-1 mr-1 flex-1 border-neutral-300" id="date" name="date" type="date" required />
+							</div>
+							<p class="error ml-4 text-red-500" id="dateError"></p>
 						</div>
 
-						<input id="terms" type="checkbox" required /><label for="terms"> I agree to the <a>Terms & Conditions</a></label>
+						<div class="form-row mt-3">
+							<input id="terms" type="checkbox" required /><label for="terms"> I agree to the <a>Terms & Conditions</a></label>
+							<p class="error inline ml-4 text-red-500" id="termsError"></p>
+						</div>
 
-						<div class="form-row">
-							<button id="addRowBtn" type="submit" class="btn">Add row</button>
-							<button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
+						<div class="form-row mt-3">
+							<button id="addRowBtn" type="submit" class="btn border border-neutral-300 rounded p-1 pl-3 pr-3 text-center">Add row</button>
+							<button id="clearBtn" type="reset" class="btn btn-secondary border border-neutral-300 rounded p-1 pl-3 pr-3 text-center">Clear</button>
 						</div>
 					</form>
 				</section>
@@ -69,17 +80,17 @@
 
 			<!-- Table -->
 			<div class="table-wrap">
-				<table class="table bg-bg-white border rounded border-neutral-200 shadow-md p-3 w-full" id="timetable">
+				<table class="table bg-white border rounded border-neutral-200 shadow-md p-3 w-full border rounded border-neutral-200 shadow-md text-left" id="timetable">
 					<thead>
 						<tr>
-							<th class="w-[20%] bg-(--brand) text-white">Name</th>
-							<th class="w-[20%] bg-(--brand) text-white">Email</th>
-							<th class="w-[20%] bg-(--brand) text-white">Phone Number</th>
-							<th class="w-[20%] bg-(--brand) text-white">Birth date</th>
-							<th class="w-[20%] bg-(--brand) text-white">Sumbission time stamp</th>
+							<th class="w-[20%] bg-(--brand) text-white p-2">Name</th>
+							<th class="w-[20%] bg-(--brand) text-white p-2">Email</th>
+							<th class="w-[20%] bg-(--brand) text-white p-2">Phone Number</th>
+							<th class="w-[20%] bg-(--brand) text-white p-2">Birth date</th>
+							<th class="w-[20%] bg-(--brand) text-white p-2">Sumbission time stamp</th>
 						</tr>
 					</thead>
-					<tbody></tbody>
+					<tbody class="text-sm"></tbody>
 				</table>
 			</div>
 		</main>
