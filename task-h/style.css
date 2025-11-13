@@ -239,6 +239,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-200 {
+    max-width: calc(var(--spacing) * 200);
+  }
   .min-w-20 {
     min-width: calc(var(--spacing) * 20);
   }
