@@ -1,6 +1,6 @@
 /*
 Author: Nassim Boudekhani & Joseph Couprie
-Date: 2025-11-04
+Date: 2025-11-13
 */
 
 /* COLOR GUIDELINES
@@ -25,16 +25,4 @@ Date: 2025-11-04
 
 	--radius: 8px;
 }
-
-/* Body cells *
-.table tbody td {
-	padding: 0.6rem 0.75rem;
-	border-bottom: 1px solid var(--border);
-}
-
-/* Alternate row color *
-.table tbody tr:nth-child(even) {
-	background: var(--table-alt);
-}
-*/
 

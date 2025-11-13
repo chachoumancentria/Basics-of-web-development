@@ -1,6 +1,6 @@
 // index.js
 // Author: Nassim Boudekhani
-// Date: 2025-11-04
+// Date: 2025-11-13
 
 document.addEventListener("DOMContentLoaded", () => {
 	const form = document.getElementById("addRowForm");
@@ -174,36 +174,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const nameCell = document.createElement("td");
 		nameCell.textContent = nameInput.value.trim();
-		nameCell.className += " p-2 text-m";
+		nameCell.className += " p-2";
 		row.appendChild(nameCell);
 
 		const emailCell = document.createElement("td");
 		emailCell.textContent = emailInput.value.trim();
-		emailCell.className += " p-2 text-m";
+		emailCell.className += " p-2";
 		row.appendChild(emailCell);
 
 		const telCell = document.createElement("td");
 		telCell.textContent = phoneInput.value;
-		telCell.className += " p-2 text-m";
+		telCell.className += " p-2";
 		row.appendChild(telCell);
 
 		const birthdateCell = document.createElement("td");
 		birthdateCell.textContent = dateInput.value;
-		birthdateCell.className += " p-2 text-m";
+		birthdateCell.className += " p-2";
 		row.appendChild(birthdateCell);
 
 		const timeStampCell = document.createElement("td");
 		timeStampCell.textContent = timeStamp.toGMTString();
-		timeStampCell.className += " p-2 text-m";
+		timeStampCell.className += " p-2";
 		row.appendChild(timeStampCell);
 
-		row.className += " odd:bg-white even:bg-(--table-alt) text-left";
+		row.className += " odd:bg-white even:bg-(--table-alt)";
 
 		table.appendChild(row);
 
 		// Reset form and focus
 
 		// form.reset();
-		nameInput.focus();
+
+		row.tabIndex = -1;
+
+		row.focus();
+		form.reset();
 	});
 });
