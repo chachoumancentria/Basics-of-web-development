@@ -1,12 +1,217 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Blåhaj Rental 2</title>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="style.css" />
-		<script src="index.js"></script>
-	</head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blåhaj Rental – Bring the Shark Home</title>
 
-	<body></body>
+<style>
+    /* --- Global Style --- */
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        background-color: #f7f7f7;
+        line-height: 1.6;
+    }
+
+    header, section {
+        padding: 60px 20px;
+    }
+
+    h1, h2 {
+        margin-top: 0;
+        font-weight: 700;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+                    url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Ikea_Blahaj_shark_plush.jpg/640px-Ikea_Blahaj_shark_plush.jpg") center/cover;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    .cta-btn {
+        display: inline-block;
+        background: #2b7bbd;
+        color: white;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    .cta-btn:hover {
+        background: #1b5a88;
+    }
+
+    /* --- Section shading --- */
+    .shade-light {
+        background-color: #ffffff;
+    }
+
+    .shade-mid {
+        background-color: #e6eef4;
+    }
+
+    .shade-dark {
+        background-color: #d4e3ef;
+    }
+
+    /* --- About Section --- */
+    .about {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* --- Product Cards --- */
+    .products {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card h3 {
+        margin: 15px 0 10px;
+    }
+
+    .card p {
+        padding: 0 15px 20px;
+    }
+
+    /* --- Features --- */
+    .features {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .feature {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    /* --- Footer --- */
+    footer {
+        background: #1a1a1a;
+        color: #dddddd;
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <h1>Rent a Blåhaj – Dive Into Comfort</h1>
+    <p>The iconic IKEA shark, now available for rent. Soft, friendly, and perfect for photos, gifts, or emotional support.</p>
+    <a href="#products" class="cta-btn">View Available Sharks</a>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section class="shade-light">
+    <div class="about">
+        <h2>About Blåhaj Rentals</h2>
+        <p>
+            We provide high-quality Blåhaj plush sharks for every occasion.  
+            Whether you need one for a photoshoot, a week of cuddles, or a themed event,  
+            we deliver comfort and personality straight to your door.
+        </p>
+    </div>
+</section>
+
+<!-- PRODUCT HIGHLIGHTS -->
+<section id="products" class="shade-mid">
+    <h2 style="text-align:center;">Our Sharks</h2>
+
+    <div class="products">
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Ikea_Blahaj_shark_plush.jpg/640px-Ikea_Blahaj_shark_plush.jpg" alt="Standard Blåhaj plush rental">
+            <h3>Classic Blåhaj</h3>
+            <p>Perfect for cuddling, decoration, or emotional support moments.</p>
+        </article>
+
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Ikea_Blahaj_shark_plush.jpg/320px-Ikea_Blahaj_shark_plush.jpg" alt="Mini Blåhaj plush rental">
+            <h3>Mini Blåhaj</h3>
+            <p>A portable version ideal for travel, gaming setups, and office desks.</p>
+        </article>
+
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Ikea_Blahaj_shark_plush.jpg/500px-Ikea_Blahaj_shark_plush.jpg" alt="Giant Blåhaj plush rental">
+            <h3>Giant Blåhaj</h3>
+            <p>The ultimate statement piece. Maximum softness, maximum impact.</p>
+        </article>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="shade-dark">
+    <h2 style="text-align:center;">Why Choose Us?</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h3>✔ Super Clean & Fresh</h3>
+            <p>Every Blåhaj is fully washed, dried, and inspected before delivery.</p>
+        </div>
+
+        <div class="feature">
+            <h3>✔ Flexible Rental Options</h3>
+            <p>Rent for a day, a week, or month-long comfort.</p>
+        </div>
+
+        <div class="feature">
+            <h3>✔ Friendly Customer Support</h3>
+            <p>We answer quickly and treat every shark with the respect it deserves.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Blåhaj Rental Company — Swim With Comfort  
+</footer>
+
+</body>
 </html>
