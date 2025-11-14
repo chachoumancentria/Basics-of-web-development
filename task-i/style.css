@@ -25,10 +25,10 @@ h2 {
 
 /* --- Hero Section --- */
 .hero {
-	background-image: url("media/blahaj_image1.avif");
+	background-image: url("media/title_image.png");
 	background-repeat: no-repeat;
 	background-size: 150%;
-	background-position: 0% 50%;
+	background-position: 100% 50%;
 	background-origin: border-box;
 	color: white;
 	text-align: center;
