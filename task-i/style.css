@@ -67,7 +67,16 @@ h2 {
 }
 
 .shade-mid {
-	background-color: #e6eef4;
+	background-color: #b4c6d1ad;
+	
+	background-image: url("media/title_image2.png");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: 0% 20%;
+	background-origin: border-box;
+	color: wrgb(225, 38, 38);
+	text-align: center;
+	padding: 120px 20px;
 }
 
 .shade-dark {
