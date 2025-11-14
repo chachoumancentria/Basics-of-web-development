@@ -110,6 +110,7 @@ h2 {
 .card img {
 	width: 100%;
 	display: block;
+	height: 70%;
 }
 
 .card h3 {
