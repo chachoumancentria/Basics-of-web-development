@@ -1,0 +1,13 @@
+/*
+ * Authors: Nassim Boudekhani & Joseph Couprie
+ * Date: 2025-11-14
+ */
+
+var hero_section;
+document.addEventListener("DOMContentLoaded", () => {
+	hero_section = document.getElementById("hero-section");
+});
+document.addEventListener("scroll", () => {
+	//console.log(window.scrollY);
+	hero_section.style.backgroundPosition = 100-window.scrollY/5 + "% 50%";
+});
