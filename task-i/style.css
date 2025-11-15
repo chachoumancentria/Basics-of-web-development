@@ -4,53 +4,67 @@
  */
 
 /* --- Global Style --- */
+:root{
+	--shark: #3a4f5c;
+	--shark-rgb: rgb(74, 113, 139); /* test, do not delete */
+	--shark-rgb: 75, 110, 135;
+}
+
+* {
+	cursor: url("media/shark_cursor.png") 0 30, auto;
+	scroll-behavior: smooth;
+	scroll-margin-top: 7rem;
+}
+
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #1a1a1a;
-	background-color: #f7f7f7;
 	line-height: 1.6;
 }
 
 header,
 section {
-	padding: 60px 20px;
+	padding: 2.5rem;
 }
 
 h1,
 h2 {
 	margin-top: 0;
+	size: 2rem;
 	font-weight: 700;
 }
 
 /* --- Hero Section --- */
 .hero {
+	padding-top: 7.75vw;
+	padding-bottom: 7.75vw;
+	overflow: hidden;
 	background-image: url("media/title_image.png");
 	background-repeat: no-repeat;
-	background-size: 150%;
+	background-size: 170%;
 	background-position: 100% 50%;
 	background-origin: border-box;
-	color: white;
+	background-color: #fdfdfd;
 	text-align: center;
-	padding: 120px 20px;
 }
 
 .hero h1 {
-	font-size: 3rem;
-	margin-bottom: 20px;
+	font-size: 6vh;
+	margin-bottom: 1.25rem;
 }
 
 .hero p {
-	font-size: 1.3rem;
-	max-width: 600px;
-	margin: 0 auto 30px;
+	font-size: 2.6vh;
+	max-width: 40rem;
+	margin: 0 auto 2rem;
 }
 
 .cta-btn {
+	position: relative; top:4vh;
 	display: inline-block;
-	background: #2b7bbd;
+	background: rgba(var(--shark-rgb), 0.95);
 	color: white;
-	padding: 14px 28px;
+	padding: 1rem 2rem;
 	border-radius: 6px;
 	font-size: 1.1rem;
 	text-decoration: none;
@@ -58,25 +72,25 @@ h2 {
 }
 
 .cta-btn:hover {
-	background: #1b5a88;
+	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
+	transform: translateY(-0.17rem);
 }
 
 /* --- Section shading --- */
 .shade-light {
-	background-color: #ffffff;
+	background-color: #fdfdfd;
 }
 
 .shade-mid {
 	background-color: #b4c6d1ad;
+	overflow: hidden;
 	
 	background-image: url("media/title_image2.png");
 	background-repeat: no-repeat;
 	background-size: 150%;
-	background-position: 0% 20%;
+	background-position: 0% 100%;
 	background-origin: border-box;
-	color: wrgb(225, 38, 38);
-	text-align: center;
-	padding: 120px 20px;
+	padding: 3.5rem;
 }
 
 .shade-dark {
@@ -85,18 +99,18 @@ h2 {
 
 /* --- About Section --- */
 .about {
-	max-width: 800px;
+	max-width: 75rem;
+	text-align:center;
 	margin: auto;
-	text-align: center;
 }
 
 /* --- Product Cards --- */
 .products {
-	max-width: 1100px;
+	max-width: 70rem;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-	gap: 25px;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 2rem;
 }
 
 .card {
@@ -111,6 +125,7 @@ h2 {
 	width: 100%;
 	display: block;
 	height: 70%;
+	max-height: 25rem;
 }
 
 .card h3 {
@@ -144,4 +159,10 @@ footer {
 	text-align: center;
 	padding: 40px 20px;
 	font-size: 0.9rem;
+}
+
+@media (orientation: portrait) {
+  .shade-mid {
+    background-repeat:repeat;
+  }
 }

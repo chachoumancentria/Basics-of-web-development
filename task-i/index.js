@@ -12,5 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("scroll", () => {
 	//console.log(window.scrollY);
 	hero_section.style.backgroundPosition = 100-window.scrollY/5 + "% 50%";
-	hero_sub_section.style.backgroundPosition = 100-window.scrollY/12 + "% 50%";
+	var divider = (window.innerHeight > window.innerWidth)? 45 : 25;
+	hero_sub_section.style.backgroundPosition = 100-(window.scrollY+385)/divider + "% 50%";
 });
