@@ -44,10 +44,10 @@ section {
 	visibility: visible;
 	position: fixed;
 	right: 3rem;
-	bottom: 3rem;
+	bottom: 4rem;
 	mix-blend-mode: difference;
 	filter: invert();
-	height: 3rem;
+	height: 4rem;
 	z-index: 9999;
 }
 
