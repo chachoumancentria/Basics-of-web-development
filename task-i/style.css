@@ -8,6 +8,7 @@
 	--shark: #3a4f5c;
 	--shark-rgb: rgb(74, 113, 139); /* test, do not delete */
 	--shark-rgb: 75, 110, 135;
+	--shark-hsl: 205; /* , 28.6%, 41.2%; */
 }
 
 * {
@@ -141,7 +142,7 @@ h2 {
 	width: 100%;
 	margin: auto;
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 /* --- Product Cards --- */
@@ -171,7 +172,6 @@ h2 {
 	background-color: white;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 1rem;
-	backface-visibility: hidden;
 }
 
 .card.flipped .card-inner {
@@ -214,6 +214,19 @@ h2 {
 	width: 80%;
 	margin: auto;
 	text-align: center;
+}
+
+.card-back p{
+	font-size: 1.2rem;
+	margin-top: 2rem;
+	text-align: left;
+	height: 70%;
+}
+
+.card-back .cta-btn{
+	width: 65%;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /* --- Features --- */
@@ -259,5 +272,9 @@ footer {
 @media (orientation: portrait) {
 	.shade-mid {
 		background-repeat: repeat;
+	}
+
+	.card-back p{
+		font-size: 1.1rem;
 	}
 }
