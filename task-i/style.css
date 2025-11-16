@@ -27,12 +27,14 @@ body {
 }
 
 .navbar {
+	position: fixed;
 	background-color: rgba(var(--shark-rgb), 0.9);
 	box-shadow: 0 1.2rem 0 rgba(var(--shark-rgb), 0.65);
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	width: 100%;
 	margin-bottom: 1.2rem;
+	z-index: 9999;
 }
 
 header,
