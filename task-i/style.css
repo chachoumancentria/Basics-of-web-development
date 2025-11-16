@@ -221,6 +221,7 @@ h2 {
 	margin-top: 2rem;
 	text-align: left;
 	height: 65%;
+	overflow-y: auto;
 }
 
 .card-back .cta-btn{
