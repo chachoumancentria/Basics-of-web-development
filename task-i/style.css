@@ -67,7 +67,7 @@ body {
 .navbar-element {
 	height: 100%;
 	margin: auto;
-	padding: 0.7rem 5rem 0rem;
+	padding: 0.7rem 1rem 0rem;
 	text-align: center;
 	position: relative;
 	display: block;
@@ -109,8 +109,21 @@ body {
 
 @media (orientation: portrait) {
 	.navbar {
-		height: 100vh;
+		height: 25vh;
+		width: 100%;
 		display: block;
+		position: relative;
+		margin: 0rem;
+		padding: 0rem;
+	}
+	.navbar-links {
+		display: block;
+		margin: 0rem;
+		padding: 0rem;
+	}
+	.horizontal-spacer {
+		display: none;
+		width: 0rem;
 	}
 }
 
