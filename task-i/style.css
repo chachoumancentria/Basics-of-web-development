@@ -242,7 +242,7 @@ h2 {
 	background-color: #73a0ba9e;
 	background-image: url("media/bg_frame.png");
 	background-size: 97% 97%;
-	background-position: center;
+	background-position: 0 100%;
 	background-origin: border-box;
 	padding-bottom: 9rem;
 	box-shadow: 0 -1.2rem 0 rgba(var(--shark-rgb), 0.65);
