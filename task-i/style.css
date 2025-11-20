@@ -117,6 +117,7 @@ body {
 	position: fixed;
 	top: 1rem;
 	right: 1rem;
+	height: 2rem;
 }
 .hamburger img {
 	height: 2rem;
@@ -125,6 +126,10 @@ body {
 .hamburger .dropdown-content {
 	translate: -10rem;
 }
+.mobile h3 {
+	font-size:medium;
+}
+
 
 @media (orientation: portrait) {
 	.navbar {
@@ -138,6 +143,9 @@ body {
 		display: block;
 		margin: 0rem;
 		padding: 0rem;
+	}
+	#logo span {
+		font-size: medium;
 	}
 }
 
