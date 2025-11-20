@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (window.scrollY < 150) {
 			back_to_top.style.bottom = -100+Math.round(window.scrollY) + "px";
+		} else {
+			back_to_top.style.bottom = "50px";
 		}
 	});
 });

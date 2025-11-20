@@ -29,12 +29,10 @@ body {
 	position: fixed;
 	background-color: rgba(var(--shark-rgb), 1);
 	box-shadow: 0rem 1.2rem 0rem 1rem rgba(var(--shark-rgb), 1);
-	padding-top: 0.5rem;
-	padding-bottom: 0rem;
+	padding: 0.5rem 0rem 0rem 0rem;
 	margin-bottom: 0rem;
 	width: 100%;
 	z-index: 9999;
-	display: flex;
 	background-size: 100% 100%;
 }
 
@@ -42,6 +40,9 @@ body {
 	margin-left: 0;
 	margin-right: 5rem;
 	display: inline-flex;
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
 }
 
 #logo span {
@@ -60,8 +61,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	flex-basis: 4/6;
 	color: var(--shark-white);
+	margin: auto;
+	max-width: 50%;
+	width: 40%;
 }
 
 .navbar-element {
@@ -102,17 +105,29 @@ body {
 	text-decoration: underline;
 }
 
-.navbar-element:hover .dropdown-content {
+.navbar-element:hover > .dropdown-content {
 	display: block;
+}
+
+.hamburger {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+}
+.hamburger img {
+	height: 2rem;
+	width: 2rem;
+}
+.hamburger .dropdown-content {
+	translate: -10rem;
 }
 
 
 @media (orientation: portrait) {
 	.navbar {
-		height: 25vh;
+		height: 7vh;
 		width: 100%;
 		display: block;
-		position: relative;
 		margin: 0rem;
 		padding: 0rem;
 	}
@@ -120,10 +135,6 @@ body {
 		display: block;
 		margin: 0rem;
 		padding: 0rem;
-	}
-	.horizontal-spacer {
-		display: none;
-		width: 0rem;
 	}
 }
 
@@ -417,5 +428,17 @@ footer {
 	.products {
 		width: 80%;
 		margin: auto;
+	}
+}
+
+@media (orientation: portrait) {
+	.desktop {
+		display: none;
+	}
+}
+
+@media (orientation: landscape) {
+	.mobile {
+		display: none;
 	}
 }
