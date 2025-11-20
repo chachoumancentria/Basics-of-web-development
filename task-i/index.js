@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		//console.log(window.scrollY);
 		hero_section.style.backgroundPosition = 100-window.scrollY/5 + "% 50%";
 		var divider = (window.innerHeight > window.innerWidth)? 45 : 25;
-		hero_sub_section.style.backgroundPosition = 100-(window.scrollY+475)/divider + "% 50%";
+		hero_sub_section.style.backgroundPosition = (window.scrollY+490)/divider + "% 50%";
 
 		if (window.scrollY < 150) {
 			back_to_top.style.bottom = -100+Math.round(window.scrollY) + "px";
