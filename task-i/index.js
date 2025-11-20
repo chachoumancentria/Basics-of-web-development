@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			back_to_top.style.bottom = "50px";
 		}
-	}
-	document.addEventListener("scroll", onScrollInput());
+	};
+	document.addEventListener("scroll", onScrollInput);
 	onScrollInput();
 });
