@@ -9,6 +9,7 @@
 	--shark-rgb: rgb(74, 113, 139); /* test, do not delete */
 	--shark-rgb: 75, 110, 135;
 	--shark-hsl: 205; /* , 28.6%, 41.2%; */
+	--shark-white: #e3e2dd;
 }
 
 * {
@@ -28,13 +29,91 @@ body {
 
 .navbar {
 	position: fixed;
-	background-color: rgba(var(--shark-rgb), 0.9);
-	box-shadow: 0 1.2rem 0 rgba(var(--shark-rgb), 0.65);
+	background-color: rgba(var(--shark-rgb), 1);
+	box-shadow: 0rem 1.2rem 0rem 1rem rgba(var(--shark-rgb), 1);
 	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding-bottom: 0rem;
+	margin-bottom: 0rem;
 	width: 100%;
-	margin-bottom: 1.2rem;
 	z-index: 9999;
+	display: flex;
+	background-size: 100% 100%;
+}
+
+#logo {
+	margin-left: 0;
+	margin-right: 5rem;
+	display: inline-flex;
+}
+
+#logo span {
+	margin: auto;
+	font-weight: bold;
+	min-width: 8rem;
+	color: var(--shark-white);
+}
+
+.horizontal-spacer {
+	flex-basis: 1/6;
+	min-width: 10%;
+}
+
+.navbar-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-basis: 4/6;
+	color: var(--shark-white);
+}
+
+.navbar-element {
+	height: 100%;
+	margin: auto;
+	padding: 0.7rem 5rem 0rem;
+	text-align: center;
+	position: relative;
+	display: block;
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+
+/* Nav bar drop down menus*/
+.dropdown-content {
+	display: none;
+	position: absolute;
+	max-width: 60rem;
+	background-color: #f1f1f1;
+	min-width: 10rem;
+	box-shadow: 0rem 0.8rem 1.5rem 0rem rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	padding: 1rem;
+	text-align: left;
+	font-size: 1rem;
+	color: black;
+	border-radius: 1rem;
+}
+.dropdown-content h3 {
+	margin-top: 0rem;
+	margin-bottom: 0.5rem;
+}
+.dropdown-content a {
+	text-decoration: none;
+	margin-bottom: 0.3rem;
+}
+.dropdown-content a:hover {
+	text-decoration: underline;
+}
+
+.navbar-element:hover .dropdown-content {
+	display: block;
+}
+
+
+@media (orientation: portrait) {
+	.navbar {
+		height: 100vh;
+		display: block;
+	}
 }
 
 header,
@@ -218,7 +297,7 @@ h2 {
 	text-align: center;
 }
 
-.card-back p{
+.card-back p {
 	font-size: 1.2rem;
 	margin-top: 2rem;
 	text-align: left;
@@ -226,9 +305,9 @@ h2 {
 	overflow-y: auto;
 }
 
-.card-back .cta-btn{
+.card-back .cta-btn {
 	width: 65%;
-	padding:0.7rem;
+	padding: 0.7rem;
 	padding-left: 0;
 	padding-right: 0;
 	font-size: 1.5rem;
@@ -279,11 +358,11 @@ footer {
 		background-repeat: repeat;
 	}
 
-	.card-back p{
+	.card-back p {
 		font-size: 1.1rem;
 	}
 
-	#back-to-top{
+	#back-to-top {
 		visibility: hidden;
 	}
 }
