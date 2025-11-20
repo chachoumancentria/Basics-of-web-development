@@ -28,8 +28,9 @@ body {
 .navbar {
 	position: fixed;
 	background-color: rgba(var(--shark-rgb), 1);
-	box-shadow: 0rem 1.2rem 0rem 1rem rgba(var(--shark-rgb), 1);
-	padding: 0.5rem 0rem 0rem 0rem;
+	box-shadow: 0rem 0.1rem 0rem 1rem rgba(var(--shark-rgb), 0.5);
+	padding-top: 0.5rem;
+	padding-bottom: 1rem;
 	margin-bottom: 0rem;
 	width: 100%;
 	z-index: 9999;
@@ -262,6 +263,18 @@ h2 {
 	margin-bottom: 1.5rem;
 }
 
+/* --- VIDEO --- */
+.video-section h1{
+	text-align: center;
+	margin: 2rem;
+}
+
+.video-section video{
+	border-radius: 1rem;
+	box-shadow: 0 0.8rem 1.5rem rgba(0,0,0,0.25);
+	margin: 2rem auto;
+}
+
 /* --- Product Cards --- */
 .products {
 	max-width: 70rem;
@@ -378,7 +391,7 @@ h2 {
 	box-shadow: 0 -1.2rem 0 #7994a7;
 }
 
-.shade-dark h2 {
+.shade-dark h1 {
 	text-align: center;
 }
 
