@@ -126,7 +126,7 @@ body {
 
 @media (orientation: portrait) {
 	.navbar {
-		height: 7vh;
+		height: 14vh;
 		width: 100%;
 		display: block;
 		margin: 0rem;
