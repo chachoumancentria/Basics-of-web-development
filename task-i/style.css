@@ -243,7 +243,7 @@ h2 {
 	background-color: #73a0ba9e;
 	background-image: url("media/bg_frame.png");
 	background-size: 97% 97%;
-	background-position: center;
+	background-position: 0 100%;
 	background-origin: border-box;
 	padding-bottom: 9rem;
 	box-shadow: 0 -1.2rem 0 rgba(var(--shark-rgb), 0.65);
@@ -269,12 +269,14 @@ h2 {
 .video-section h1 {
 	text-align: center;
 	margin: 2rem;
+	margin-top: 0;
 }
 
 .video-section video {
 	border-radius: 1rem;
 	box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.25);
 	margin: 2rem auto;
+	margin-top: 0.75rem;
 }
 
 /* --- Product Cards --- */
@@ -391,10 +393,23 @@ h2 {
 	background-color: #d4e3ef;
 	margin-top: 1.2rem;
 	box-shadow: 0 -1.2rem 0 #7994a7;
+	padding-bottom: 10rem;
 }
 
 .shade-dark h1 {
 	text-align: center;
+}
+
+.shade-dark h2 {
+	font-size: 1.7rem;
+}
+
+.shade-dark p {
+	padding-left: 4rem;
+	font-size: 1.6rem;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 1rem;
 }
 
 /* --- About Section --- */
@@ -444,6 +459,10 @@ footer {
 	.products {
 		width: 80%;
 		margin: auto;
+	}
+
+	.shade-dark p {
+		padding-left: 0;
 	}
 }
 

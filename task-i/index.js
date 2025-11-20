@@ -19,27 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	hero_section = document.getElementById("hero-section");
 	hero_sub_section = document.getElementById("hero-sub-section");
 
-
-	main_content.style.paddingTop = navbar.getBoundingClientRect().height +"px";
-
-
+	main_content.style.paddingTop = navbar.getBoundingClientRect().height + "px";
 
 	document.querySelectorAll(".card").forEach((card) => {
 		card.addEventListener("click", () => {
 			card.classList.toggle("flipped");
 		});
 	});
-	document.addEventListener("scroll", () => {
+
+	function onScrollInput() {
 		//console.log(window.scrollY);
-		hero_section.style.backgroundPosition = 100-window.scrollY/5 + "% 50%";
-		var divider = (window.innerHeight > window.innerWidth)? 45 : 25;
-		hero_sub_section.style.backgroundPosition = (window.scrollY+490)/divider + "% 50%";
+		hero_section.style.backgroundPosition = 100 - window.scrollY / 5 + "% 50%";
+		var divider = window.innerHeight > window.innerWidth ? 45 : 25;
+		hero_sub_section.style.backgroundPosition = (window.scrollY + 490) / divider + "% 50%";
 
 		if (window.scrollY < 150) {
-			back_to_top.style.bottom = -100+Math.round(window.scrollY) + "px";
+			back_to_top.style.bottom = -100 + Math.round(window.scrollY) + "px";
 		} else {
 			back_to_top.style.bottom = "50px";
 		}
-	});
+	}
+	document.addEventListener("scroll", onScrollInput());
+	onScrollInput();
 });
-
