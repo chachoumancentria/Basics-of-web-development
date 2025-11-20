@@ -34,6 +34,7 @@ body {
 	width: 100%;
 	z-index: 9999;
 	background-size: 100% 100%;
+	height: 6vh;
 }
 
 #logo {
@@ -65,15 +66,15 @@ body {
 	flex-direction: row;
 	justify-content: space-evenly;
 	color: var(--shark-white);
-	margin: auto;
 	max-width: 50%;
 	width: 40%;
+	position: fixed;
+	top: 1.4rem;
+	right: 1rem;
 }
 
 .navbar-element {
 	height: 100%;
-	margin: auto;
-	padding: 0.7rem 1rem 0rem;
 	text-align: center;
 	position: relative;
 	display: block;
