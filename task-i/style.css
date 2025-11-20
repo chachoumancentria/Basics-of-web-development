@@ -17,14 +17,12 @@
 		url("media/shark_cursor.png") 0 30,
 		auto;
 	scroll-behavior: smooth;
-	scroll-margin-top: 7rem;
 }
 
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.6;
-	overflow-x: hidden;
 }
 
 .navbar {
@@ -143,7 +141,6 @@ h2 {
 .hero {
 	padding-top: 7.75vw;
 	padding-bottom: 7.75vw;
-	overflow: hidden;
 	background-image: url("media/title_image.png");
 	background-repeat: no-repeat;
 	background-size: 170%;
@@ -203,14 +200,29 @@ h2 {
 
 .shade-mid {
 	background-color: #b4c6d1ad;
-	overflow: hidden;
 
 	background-image: url("media/title_image2.png");
 	background-repeat: no-repeat;
+	padding: 3.5rem;
+}
+
+.bg1 {
+	background-image: url("media/title_image2.png");
 	background-size: 150%;
 	background-position: 0% 100%;
 	background-origin: border-box;
-	padding: 3.5rem;
+}
+.bg2 {
+	background-color: #73a0ba9e;
+	background-image: url("media/bg_frame.png");
+	background-size: 97% 97%;
+	background-position: center;
+	background-origin: border-box;
+	padding-bottom: 9rem;
+	box-shadow: 0 -1.2rem 0 rgba(var(--shark-rgb), 0.65);
+}
+.bg2 h1 {
+	padding-top: 6rem;
 }
 
 .shade-mid h1 {
@@ -233,6 +245,13 @@ h2 {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	gap: 2rem;
+}
+#products{
+	scroll-margin-top: 8rem;
+}
+
+.seasonal_blahaj {
+	padding-top: 2rem;
 }
 
 .card {
@@ -331,6 +350,8 @@ h2 {
 
 .shade-dark {
 	background-color: #d4e3ef;
+	margin-top: 1.2rem;
+	box-shadow: 0 -1.2rem 0 #7994a7;
 }
 
 .shade-dark h2 {
@@ -364,5 +385,24 @@ footer {
 
 	#back-to-top {
 		visibility: hidden;
+	}
+	
+	.bg2, .bg1 {
+		width: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.bg2 {
+		padding: 0;
+		background-image: none;
+		padding-bottom: 5rem;
+	}
+	.bg2 h1 {
+		padding-top: 2rem;
+	}
+
+	.products {
+		width: 80%;
+		margin: auto;
 	}
 }
