@@ -10,6 +10,9 @@
 	--shark-rgb: 75, 110, 135;
 	--shark-hsl: 205; /* , 28.6%, 41.2%; */
 	--shark-white: #e3e2dd;
+
+	--section-header-size: 1.7rem;
+	--section-text-size: 1.4rem;
 }
 
 * {
@@ -57,7 +60,6 @@ body {
 }
 
 .horizontal-spacer {
-	flex-basis: 1/6;
 	min-width: 10%;
 }
 
@@ -168,7 +170,6 @@ section {
 h1,
 h2 {
 	margin-top: 0;
-	size: 2rem;
 	font-weight: 700;
 }
 
@@ -228,7 +229,13 @@ h2 {
 }
 
 .shade-light p {
-	font-size: 1.6rem;
+	font-size: var(--section-text-size);
+	width: 100%;
+	margin: auto;
+}
+
+.shade-light h2 {
+	font-size: var(--section-header-size);
 	width: 100%;
 	margin: auto;
 }
@@ -274,8 +281,9 @@ h2 {
 }
 
 /* --- VIDEO --- */
-.video-section h1 {
+.video-section h2 {
 	text-align: center;
+	font-size: var(--section-header-size);
 	margin: 2rem;
 	margin-top: 0;
 }
@@ -285,6 +293,7 @@ h2 {
 	box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.25);
 	margin: 2rem auto;
 	margin-top: 0.75rem;
+	width: 100%;
 }
 
 /* --- Product Cards --- */
@@ -378,7 +387,7 @@ h2 {
 	padding: 0.7rem;
 	padding-left: 0;
 	padding-right: 0;
-	font-size: 1.5rem;
+	font-size: var(--section-text-size);
 }
 
 /* --- Features --- */
@@ -404,17 +413,19 @@ h2 {
 	padding-bottom: 10rem;
 }
 
-.shade-dark h1 {
+.shade-dark h2 {
 	text-align: center;
+	font-size: var(--section-header-size);
+
 }
 
-.shade-dark h2 {
-	font-size: 1.7rem;
+.shade-dark h3 {
+	font-size: var(--section-text-size);
 }
 
 .shade-dark p {
 	padding-left: 4rem;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	width: 100%;
 	margin: auto;
 	margin-bottom: 1rem;
@@ -460,7 +471,7 @@ footer {
 		background-image: none;
 		padding-bottom: 5rem;
 	}
-	.bg2 h1 {
+	.bg2 h2 {
 		padding-top: 2rem;
 	}
 
