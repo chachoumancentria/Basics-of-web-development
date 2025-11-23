@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	main_content = document.getElementsByClassName("main-content-wrapper")[0];
 
-	hero_section = document.getElementById("hero-section");
 	hero_sub_section = document.getElementById("hero-sub-section");
 
 	main_content.style.paddingTop = navbar.getBoundingClientRect().height + "px";
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function onScrollInput() {
 		//console.log(window.scrollY);
-		hero_section.style.backgroundPosition = 100 - window.scrollY / 5 + "% 50%";
 		var divider = window.innerHeight > window.innerWidth ? 45 : 25;
 		hero_sub_section.style.backgroundPosition = (window.scrollY + 490) / divider + "% 50%";
 
