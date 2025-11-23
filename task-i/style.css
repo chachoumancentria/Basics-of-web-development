@@ -83,6 +83,11 @@ body {
 	font-size: 1.5rem;
 	font-weight: bolder;
 }
+@media (max-width: 1200px) {
+	.navbar-element {
+		font-size: 2.1vw;
+	}
+}
 
 /* Nav bar drop down menus*/
 .dropdown-content {
@@ -117,25 +122,35 @@ body {
 
 .hamburger {
 	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	height: 2rem;
+	top: 2vh;
+	right: 2vh;
+	height: 5vh;
 }
 .hamburger img {
-	height: 2rem;
-	width: 2rem;
+	height: 5vh;
+	width: 5vh;
 }
 .hamburger .dropdown-content {
-	translate: -10rem;
+	translate: -10rem 0rem;
+}
+.hamburger span {
+	font-size: 1rem;
+}
+.vertical-spacer {
+	background-color: rgb(var(--shark-rgb));
+	border-radius: 2px;
+	width: 100%;
+	height: 5px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .mobile h3 {
-	font-size:medium;
+	font-size: medium;
 }
-
 
 @media (orientation: portrait) {
 	.navbar {
-		height: 14vh;
+		height: 9vh;
 		width: 100%;
 		display: block;
 		margin: 0rem;
@@ -416,7 +431,6 @@ h2 {
 .shade-dark h2 {
 	text-align: center;
 	font-size: var(--section-header-size);
-
 }
 
 .shade-dark h3 {
