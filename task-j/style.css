@@ -1,6 +1,6 @@
 /*
  * Authors: Nassim Boudekhani & Joseph Couprie
- * Date: 2025-11-14
+ * Date: 2025-11-27
  */
 
 /* --- Global Style --- */
@@ -10,6 +10,9 @@
 	--shark-rgb: 75, 110, 135;
 	--shark-hsl: 205; /* , 28.6%, 41.2%; */
 	--shark-white: #e3e2dd;
+
+	--section-header-size: 1.7rem;
+	--section-text-size: 1.4rem;
 }
 
 * {
@@ -36,7 +39,6 @@ body {
 	background-size: 100% 100%;
 	height: 6vh;
 }
-
 #logo {
 	margin-left: 0;
 	margin-right: 5rem;
@@ -57,7 +59,6 @@ body {
 }
 
 .horizontal-spacer {
-	flex-basis: 1/6;
 	min-width: 10%;
 }
 
@@ -80,6 +81,11 @@ body {
 	display: block;
 	font-size: 1.5rem;
 	font-weight: bolder;
+}
+@media (max-width: 1200px) {
+	.navbar-element {
+		font-size: 2.1vw;
+	}
 }
 
 /* Nav bar drop down menus*/
@@ -115,25 +121,36 @@ body {
 
 .hamburger {
 	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	height: 2rem;
+	top: 2vh;
+	right: 2vh;
+	height: 5vh;
 }
 .hamburger img {
-	height: 2rem;
-	width: 2rem;
+	height: 5vh;
+	width: 5vh;
 }
 .hamburger .dropdown-content {
-	translate: -10rem;
+	translate: -10rem 0rem;
+}
+.hamburger span {
+	font-size: 1rem;
+}
+.vertical-spacer {
+	background-color: rgb(var(--shark-rgb));
+	border-radius: 2px;
+	width: 100%;
+	height: 5px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .mobile h3 {
-	font-size:medium;
+	font-size: medium;
 }
 
 
 @media (orientation: portrait) {
 	.navbar {
-		height: 14vh;
+		height: 9vh;
 		width: 100%;
 		display: block;
 		margin: 0rem;
@@ -145,7 +162,7 @@ body {
 		padding: 0rem;
 	}
 	#logo span {
-		font-size: medium;
+	font-size: medium;
 	}
 }
 
@@ -286,6 +303,7 @@ h2 {
 	margin: 2rem auto;
 	margin-top: 0.75rem;
 	margin-left: 10%;
+	width: 80%;
 }
 
 /* --- Product Cards --- */
