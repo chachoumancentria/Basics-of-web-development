@@ -153,15 +153,39 @@ Date: 2025-11-27
 			<section class="cart">
 				<h2>Cart</h2>
 				<template id="cart-item-template">
-					<li class="order-item" data-index="">
+					<li class="cart-item" data-index="">
 						<div class="item-contents">
 							<img class="cart-item-image" src="" alt="">
-							<div class="details">
+							<div class="cart-item-details">
 								<h4 class="cart-item-title"></h4>
-								<p>Quantity: <span class="cart-item-quantity"></span></p>
-								<p>Duration: <span class="cart-item-duration"></span></p>
-								<p>Price per unit: <span class="cart-item-price-per-unit"></span></p>
-								<p class="cart-item-total-line">Total: <span class="cart-item-price-total"></span></p>
+								<div class="cart-item-details-row">
+									<p>Quantity:</p>
+									<div class="cart-item-value-field">
+										<button class="shift-button cart-item-quantity-decrease">&lt;</button>
+										<span class="cart-item-quantity"></span>
+										<button class="shift-button cart-item-quantity-increase">&gt;</button>
+									</div>
+								</div>
+								<div class="cart-item-details-row">
+									<p>Duration:</p>
+									<div class="cart-item-value-field">
+										<button class="shift-button cart-item-duration-decrease">&lt;</button>
+										<span class="cart-item-duration"></span>
+										<button class="shift-button cart-item-duration-increase">&gt;</button>
+									</div>
+								</div>
+								<div class="cart-item-details-row">
+									<p>Price per unit:</p>
+									<div class="cart-item-value-field">
+										<span class="cart-item-price-per-unit"></span>
+									</div>
+								</div>
+								<div class="cart-item-details-row cart-item-total-line">
+									<p>Total:</p>
+									<div class="cart-item-value-field">
+										<span class="cart-item-price-total"></span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -182,6 +206,16 @@ Date: 2025-11-27
 	</div>
 	<!-- FOOTER -->
 	<footer>© 2025 Blåhaj Rental Company — Dive Into Comfort</footer>
+	<!--<div class="popup-container">
+		<div class="popup-content">
+			<h2>Remove item ?</h2>
+			<p>You have set the quantity of the item to zero, do you wish to remove the item ?</p>
+			<div class="popup-response-buttons">
+				<button id="popup-remove-button">Remove</button>
+				<button id="popup-keep-button">Keep</button>
+			</div>
+		</div>
+	</div>-->
 </body>
 
 </html>
