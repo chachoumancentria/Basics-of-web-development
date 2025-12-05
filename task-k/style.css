@@ -320,8 +320,8 @@ main {
 	background-color: #dddddd;
 	position: absolute;
 	top: 30vh;
-	left: 30vw;
-	width: 40vw;
+	left: 35vw;
+	width: calc(100vw - (2 * left));
 	height: 40vh;
 	box-sizing: border-box;
 	padding: 2rem;
@@ -333,7 +333,7 @@ main {
 	display: flex;
 	margin: auto;
 	position: absolute;
-	bottom: 5rem;
+	bottom: 4rem;
 	width: calc(100% - 4rem);
 	justify-content: space-evenly;
 	gap: 1rem;
