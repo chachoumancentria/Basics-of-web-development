@@ -325,6 +325,8 @@ main {
 	height: 40vh;
 	box-sizing: border-box;
 	padding: 2rem;
+
+	border-radius: 1rem;
 }
 
 .popup-response-buttons {
@@ -335,6 +337,7 @@ main {
 	width: calc(100% - 4rem);
 	justify-content: space-evenly;
 	gap: 1rem;
+	height: 2rem;
 }
 
 .popup-response-buttons button {
