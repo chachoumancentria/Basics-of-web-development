@@ -513,7 +513,6 @@ h2 {
 
 .popup-response-buttons button {
 	flex: 1;
-	position: relative;
 	top: 4vh;
 	display: inline-block;
 	background: rgba(var(--shark-rgb), 0.95);
