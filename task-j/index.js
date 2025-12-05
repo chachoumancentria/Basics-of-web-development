@@ -21,7 +21,32 @@ document.addEventListener("DOMContentLoaded", () => {
 	main_content.style.paddingTop = navbar.getBoundingClientRect().height + "px";
 
 	document.querySelectorAll(".card").forEach((card) => {
-		card.addEventListener("click", () => {
+		card.addEventListener("click", (event) => {
+			if (event.target.matches("button")) {
+				const popup = document.createElement("div");
+				popup.className = "popup-container";
+
+				popup.innerHTML = `<div class="popup-content">
+										<h2>Item added</h2>
+										<p>The item has been added to your cart. You can access your cart by clicking on the button below, or by clicking the cart icon at the top of your screen.</p>
+										<div class="popup-response-buttons">
+											<button id="popup-see-cart-button">See cart</button>
+											<button id="popup-keep-browsing-button">Continue browsing</button>
+										</div>
+									</div>`;
+
+				document.querySelector("body").appendChild(popup);
+				
+				document.querySelector("#popup-see-cart-button").addEventListener("click", () => {
+					document.location = "/Basics-of-web-development/task-k";
+				});
+
+				document.querySelector("#popup-keep-browsing-button").addEventListener("click", () => {
+					document.querySelector(".popup-container").remove();
+				});
+
+				return;
+			}
 			card.classList.toggle("flipped");
 		});
 	});

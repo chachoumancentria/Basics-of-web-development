@@ -41,7 +41,6 @@ function updateCartCookie(cart) {
 function addCartItem(cart_item) { // cart_item is an array [name, quantity, duration] of type [string, int, int]
 	var cart = getCartCookieData();
     updateCartCookie(cart.concat([cart_item]));
-    document.location.reload();
 }
 function deleteCartItem(index) {
 	var cart = getCartCookieData();
