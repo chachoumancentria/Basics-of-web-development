@@ -17,7 +17,7 @@
 
 * {
 	cursor:
-		url("media/shark_cursor.png") 0 30,
+		url("../task-k/media/shark_cursor.png") 0 30,
 		auto;
 	scroll-behavior: smooth;
 }
@@ -200,7 +200,7 @@ h2 {
 .hero {
 	padding-top: 7.75vw;
 	padding-bottom: 7.75vw;
-	background-image: url("media/title_image.png");
+	background-image: url("../task-k/media/title_image.png");
 	background-repeat: no-repeat;
 	background-size: 170%;
 	background-position: 100% 50%;
@@ -266,20 +266,20 @@ h2 {
 .shade-mid {
 	background-color: #b4c6d1ad;
 
-	background-image: url("media/title_image2.png");
+	background-image: url("../task-k/media/title_image2.png");
 	background-repeat: no-repeat;
 	padding: 3.5rem;
 }
 
 .bg1 {
-	background-image: url("media/title_image2.png");
+	background-image: url("../task-k/media/title_image2.png");
 	background-size: 150%;
 	background-position: 0% 100%;
 	background-origin: border-box;
 }
 .bg2 {
 	background-color: #73a0ba9e;
-	background-image: url("media/bg_frame.png");
+	background-image: url("../task-k/media/bg_frame.png");
 	background-size: 97% 97%;
 	background-position: 0 100%;
 	background-origin: border-box;

@@ -19,7 +19,7 @@
 
 * {
 	cursor:
-		url("media/shark_cursor.png") 0 30,
+		url("../task-k/media/shark_cursor.png") 0 30,
 		auto;
 	scroll-behavior: smooth;
 }
@@ -216,7 +216,7 @@ h2 {
 .hero {
 	padding-top: 7.75vw;
 	padding-bottom: 7.75vw;
-	background-image: url("media/title_image.png");
+	background-image: url("../task-k/media/title_image.png");
 	background-repeat: no-repeat;
 	background-size: 170%;
 	background-position: 100% 50%;
@@ -278,13 +278,13 @@ h2 {
 .shade-mid {
 	background-color: #b4c6d1ad;
 
-	background-image: url("media/title_image2.png");
+	background-image: url("../task-k/media/title_image2.png");
 	background-repeat: no-repeat;
 	padding: 3.5rem;
 }
 
 .bg1 {
-	background-image: url("media/title_image2.png");
+	background-image: url("../task-k/media/title_image2.png");
 	background-size: 150%;
 	background-position: 0% 100%;
 	background-origin: border-box;
@@ -292,7 +292,7 @@ h2 {
 
 .bg2 {
 	background-color: #73a0ba9e;
-	background-image: url("media/bg_frame.png");
+	background-image: url("../task-k/media/bg_frame.png");
 	background-size: 97% 97%;
 	background-position: 0 100%;
 	background-origin: border-box;
@@ -491,25 +491,44 @@ h2 {
 	background-color: #dddddd;
 	position: absolute;
 	top: 30vh;
-	left: 30vw;
-	width: 40vw;
+	left: 35vw;
+	width: calc(100vw - (2 * left));
 	height: 40vh;
 	box-sizing: border-box;
 	padding: 2rem;
+
+	border-radius: 1rem;
 }
 
 .popup-response-buttons {
 	display: flex;
 	margin: auto;
 	position: absolute;
-	bottom: 2rem;
+	bottom: 4rem;
 	width: calc(100% - 4rem);
-	justify-content: space-evenly;
-	gap: 1rem;
+	justify-content: space-around;
+	gap: 2rem;
+	height: 3rem;
 }
 
 .popup-response-buttons button {
 	flex: 1;
+	position: relative;
+	top: 4vh;
+	display: inline-block;
+	background: rgba(var(--shark-rgb), 0.95);
+	color: white;
+	padding: 1rem 2rem;
+	border-color: transparent;
+	border-radius: 6px;
+	font-size: 1.1rem;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.popup-response-buttons button:hover{
+	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
+	transform: translateY(-0.17rem);
 }
 
 
