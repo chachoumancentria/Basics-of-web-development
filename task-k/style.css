@@ -427,17 +427,22 @@ footer {
 }
 
 @media (orientation: portrait) {
-	.navbar {
+	main span {
 		font-size: 15rem;
 	}
 
-	h4 {
-		font-size: 5rem;
+	main h4 {
+		font-size: 2rem;
 	}
 	
-	p {
-		font-size: 3rem;
+	main p {
+		font-size: 1rem;
 	}
+
+	main {
+		display: block;
+	}
+
 	.popup-content {
 		--popup-width: 80vw;
 	}
