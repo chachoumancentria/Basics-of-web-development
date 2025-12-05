@@ -336,7 +336,7 @@ main {
 	bottom: 4rem;
 	width: calc(100% - 4rem);
 	justify-content: space-evenly;
-	gap: 1rem;
+	gap: 2rem;
 	height: 3rem;
 }
 
