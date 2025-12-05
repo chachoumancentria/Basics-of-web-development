@@ -333,7 +333,7 @@ main {
 	display: flex;
 	margin: auto;
 	position: absolute;
-	bottom: 2rem;
+	bottom: 5rem;
 	width: calc(100% - 4rem);
 	justify-content: space-evenly;
 	gap: 1rem;
