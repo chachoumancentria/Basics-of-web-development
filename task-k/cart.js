@@ -40,7 +40,8 @@ function updateCartCookie(cart) {
 }
 function addCartItem(cart_item) { // cart_item is an array [name, quantity, duration] of type [string, int, int]
 	var cart = getCartCookieData();
-	updateCartCookie(cart.concat([cart_item]));
+    updateCartCookie(cart.concat([cart_item]));
+    document.location.reload();
 }
 function deleteCartItem(index) {
 	var cart = getCartCookieData();
@@ -51,3 +52,11 @@ function deleteCart() {
 	document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
 	updateCartPreview();
 }
+
+document.addEventListener("DOMContentLoaded", () => { 
+    if (getCartCookieData().length == 0) {
+        document.getElementById("cart-navigation-shortcut").style.display = "none";
+    } else {
+        document.getElementById("cart-navigation-shortcut").style.display = "block";
+    }
+});

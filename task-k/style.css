@@ -61,6 +61,14 @@ body {
 	color: var(--shark-white);
 }
 
+#cart-navigation-shortcut, #cart-navigation-shortcut img {
+	position: fixed;
+	top: 1.4rem;
+	right: calc(40% + 1rem + 2rem);
+	width: 5vh;
+	height: 4vh;
+}
+
 .horizontal-spacer {
 	min-width: 10%;
 }
