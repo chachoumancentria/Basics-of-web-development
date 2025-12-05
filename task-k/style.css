@@ -427,42 +427,16 @@ footer {
 }
 
 @media (orientation: portrait) {
-	.shade-mid {
-		background-repeat: repeat;
+	.navbar {
+		font-size: 2rem;
 	}
 
-	.card-back p {
-		font-size: 1.1rem;
+	.h4 {
+		font-size: 2rem;
 	}
-
-	#back-to-top {
-		visibility: hidden;
-	}
-
-	.bg2,
-	.bg1 {
-		width: auto;
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	.bg2 {
-		padding: 0;
-		background-image: none;
-		padding-bottom: 5rem;
-	}
-
-	.bg2 h1 {
-		padding-top: 2rem;
-	}
-
-	.products {
-		width: 80%;
-		margin: auto;
-	}
-
-	.shade-dark p {
-		padding-left: 0;
+	
+	.popup-content {
+		--popup-width: 10vw;
 	}
 }
 
