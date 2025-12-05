@@ -20,7 +20,6 @@
 
 
 var navbar;
-var back_to_top;
 var cart_DOM;
 
 function updateCartPreview() {
@@ -128,22 +127,11 @@ function updateCartPreview() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	navbar = document.getElementsByClassName("navbar")[0];
-	back_to_top = document.getElementById("back-to-top");
 	main_content = document.getElementsByClassName("main-content-wrapper")[0];
 	cart_DOM = document.getElementById("cart");
 
 	main_content.style.paddingTop = navbar.getBoundingClientRect().height + "px";
 
-	function onScrollInput() {
-		//console.log(window.scrollY);
-
-		if (window.scrollY < 150) {
-			back_to_top.style.bottom = -100 + Math.round(window.scrollY) + "px";
-		} else {
-			back_to_top.style.bottom = "50px";
-		}
-	};
-	document.addEventListener("scroll", onScrollInput);
 
 	cart_DOM.addEventListener("click", event => {
 		if (!event.target.matches("button")) return;
@@ -224,6 +212,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		updateCartPreview();
 	});
 
-	onScrollInput();
 	updateCartPreview();
 });

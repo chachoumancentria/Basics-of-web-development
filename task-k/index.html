@@ -151,7 +151,7 @@ Date: 2025-11-27
 		</div>
 	</header>
 
-	<a href="#"><img id="back-to-top" src="media/chevron_up_arrow.png" alt="go back to top of the page"></a>
+	<!--<a href="#"><img id="back-to-top" src="media/chevron_up_arrow.png" alt="go back to top of the page"></a>-->
 	<div class="main-content-wrapper">
 
 		<main>
@@ -204,8 +204,104 @@ Date: 2025-11-27
 				</ul>
 			</section>
 
-			<section class="delivery-information">
+			<section class="user-information-form">
 				<h2>Delivery Information</h2>
+				<form id="client-details">
+					<input name="cart" type="text" hidden>
+					<fieldset class="personal-info">
+						<h3>Personal information</h3>
+						<div class="form-row">
+							<label for="fullName">Full Name*: </label>
+							<input id="fullName" name="fullName" type="text" required placeholder="John Doe" />
+							<p class="error" id="nameError"></p>
+						</div>
+
+						<div class="form-row">
+							<label for="email">Email*: </label>
+							<input id="email" name="email" type="text" required placeholder="john.doe@example.com" />
+							<p class="error" id="emailError"></p>
+						</div>
+
+						<div class="form-row">
+							<label for="tel">Phone Number*: </label>
+							<input id="tel" name="tel" type="tel" required placeholder="+358 12345678" />
+							<p class="error" id="telError"></p>
+						</div>
+						<br>
+
+						<div class="form-row">
+							<input type="checkbox" name="terms">
+							<label>Accept <a target="_blank" href="terms.html">Terms & Conditions</a>*</label>
+							<p class="error" id="termsError"></p>
+						</div>
+						<div class="form-row">
+							<input type="checkbox" name="newsletter">
+							<label>Receive news and deals in your inbox</label>
+						</div>
+					</fieldset>
+
+					
+
+					<fieldset class="delivery-information">
+						<h3>Delivery information</h3>
+						<div class="form-row">
+							<label for="street-name">Street Name & Number*: </label>
+							<input id="street-name" name="street-name" type="text" required placeholder="" />
+							<p class="error" id="streetError"></p>
+						</div>
+						<div class="form-row">
+							<label for="city">City*: </label>
+							<input id="city" name="city" type="text" required placeholder="" />
+							<p class="error" id="cityError"></p>
+						</div>
+						<div class="form-row">
+							<label for="postal-code">Postal Code*: </label>
+							<input id="postal-code" name="postal-code" type="text" required placeholder="" />
+							<p class="error" id="postalError"></p>
+						</div>
+						<div class="form-row">
+							<label for="country">Country*: </label>
+							<input id="country" name="country" type="text" required placeholder="" />
+							<p class="error" id="countryError"></p>
+						</div>
+					</fieldset>
+
+
+
+					<fieldset class="wishes-fieldset">
+						<h3>Special request</h3>
+						<p>If you require something specific for your Blåhaj, leave it below:</p>
+						<div class="form-row">
+							<textarea id="wishes" type="text"></textarea>
+						</div>
+					</fieldset>
+
+
+					<fieldset class="card-information">
+						<h3>Payment information</h3>
+						
+						<div class="form-row">
+							<label for="card-name">Name on card*: </label>
+							<input id="card-name" name="card-name" type="text" required placeholder="John Doe" />
+							<p class="error" id="cardNameError"></p>
+						</div>
+						<div class="form-row">
+							<label for="card-number">Card Number*: </label>
+							<input id="card-number" name="card-number" type="text" required placeholder="1234 5678 9123 4567" />
+							<p class="error" id="cardNumberError"></p>
+						</div>
+						<div class="form-row">
+							<label for="card-expiry">Expiry Date*: </label>
+							<input id="card-expiry" name="card-expiry" type="text" required placeholder="12.25" />
+							<p class="error" id="cardExpiryError"></p>
+						</div>
+						<div class="form-row">
+							<label for="card-cvc">CVC*: </label>
+							<input id="card-cvc" name="card-cvc" type="text" required placeholder="123" />
+							<p class="error" id="cardCVCError"></p>
+						</div>
+					</fieldset>
+				</form>
 			</section>
 		</main>
 	</div>
