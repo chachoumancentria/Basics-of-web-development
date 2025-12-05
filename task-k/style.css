@@ -319,9 +319,10 @@ main {
 .popup-content {
 	background-color: #dddddd;
 	position: absolute;
+	--popup-width: 40vw;
+	width: var(--popup-width);
 	top: 30vh;
-	left: 35vw;
-	width: calc(100vw - (2 * left));
+	left: calc(50vw - var(--popup-width) / 2);
 	height: 40vh;
 	box-sizing: border-box;
 	padding: 2rem;
