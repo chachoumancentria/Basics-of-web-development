@@ -213,4 +213,122 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	updateCartPreview();
+
+
+
+
+
+	const form = document.getElementById("addRowForm");
+
+	const timeStamp = document.getElementById("timeStamp");
+	const nameInput = document.getElementById("fullName");
+	const emailInput = document.getElementById("email");
+	const phoneInput = document.getElementById("tel");
+	const termsAccepted = document.getElementById("terms");
+
+	function checkNameInput() {
+		const fullName = nameInput.value.trim();
+		if (!fullName) {
+			document.getElementById("nameError").innerHTML = "Please enter your name";
+			console.warn("WARNING: No name was given");
+			nameInput.focus();
+			return false;
+		}
+		if (!fullName.includes(" ")) {
+			document.getElementById("nameError").innerHTML = "Please enter your first name, and last name";
+			console.warn("WARNING: Full name must contain two parts");
+			nameInput.focus();
+			return false;
+		}
+		if (fullName.split(" ")[0].length < 2) {
+			document.getElementById("nameError").innerHTML = "Your first name should be more than 2 letters";
+			console.warn("WARNING: First name should be more than 2 letters");
+			nameInput.focus();
+			return false;
+		}
+		if (fullName.split(" ")[fullName.split(" ").length - 1].length < 2) {
+			document.getElementById("nameError").innerHTML = "Your last name should be more than 2 letters";
+			console.warn("WARNING: Last name should be more than 2 letters");
+			nameInput.focus();
+			return false;
+		}
+		console.info("INFO: Full name was correctly given");
+		document.getElementById("nameError").innerHTML = "";
+		return true;
+	}
+
+	function checkEmailInput() {
+		const email = emailInput.value.trim();
+		if (!email) {
+			document.getElementById("emailError").innerHTML = "Please enter your email";
+			console.warn("WARNING: No email was given");
+			emailInput.focus();
+			return false;
+		}
+		const emailComponents = email.split("@");
+		// verify if the email follows the XXX@XXX.XX pattern
+		if (!email.includes("@") || !emailComponents[emailComponents.length - 1].includes(".")) {
+			document.getElementById("emailError").innerHTML = "Please enter a valid email";
+			console.warn("WARNING: Full name must contain two parts");
+			emailInput.focus();
+			return false;
+		}
+		console.info("INFO: Email was correctly given");
+		document.getElementById("emailError").innerHTML = "";
+		return true;
+	}
+
+	function checkPhoneInput() {
+		const phone = phoneInput.value.trim();
+		if (!phone) {
+			document.getElementById("telError").innerHTML = "Please enter your phone number";
+			console.warn("WARNING: No phone number was given");
+			phoneInput.focus();
+			return false;
+		}
+		if (phone.length < 8) {
+			document.getElementById("telError").innerHTML = "The phone number is too short";
+			console.warn("WARNING: Invalid phone number: too short");
+			phoneInput.focus();
+			return false;
+		}
+		if (phone.length > 16) {
+			document.getElementById("telError").innerHTML = "The phone number is too long";
+			console.warn("WARNING: Invalid phone number: too long");
+			phoneInput.focus();
+			return false;
+		}
+		if (phone.length == 16 && phone[0] != "+") {
+			document.getElementById("telError").innerHTML = "The phone number is too long";
+			console.warn("WARNING: Invalid phone number: too long");
+			phoneInput.focus();
+			return false;
+		}
+		console.info("INFO: Phone number was correctly given");
+		document.getElementById("telError").innerHTML = "";
+		return true;
+	}
+	function checkTermsInput() {
+		if (!termsAccepted.checked) {
+			document.getElementById("termsError").innerHTML = "This is mandatory";
+			console.warn("WARNING: Terms of Service must be accepted");
+			return false;
+		}
+		document.getElementById("termsError").innerHTML = "";
+		return true;
+		
+	}
+
+	// Verify the input on each modification
+	nameInput.addEventListener("input", checkNameInput);
+	emailInput.addEventListener("input", checkEmailInput);
+	phoneInput.addEventListener("input", checkPhoneInput);
+	termsAccepted.addEventListener("click", checkTermsInput);
+
+	// remove unwanted characters from the tel input
+	phoneInput.addEventListener("input", () => {
+		const filteredPhoneNumber = phoneInput.value.replace(/[^+0-9]/g, "");
+		phoneInput.value = filteredPhoneNumber;
+	});
+
 });
