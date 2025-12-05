@@ -86,6 +86,24 @@ function updateCartPreview() {
 				item_price = 10;
 				rental_frequency = "week" + (cart_item[2] > 1 ? "s" : "");
 				break;
+			case "haloween":
+				preview_image = "media/halloween_blahaj.png";
+				item_name = "Halloween Blåhaj";
+				item_price = 27;
+				rental_frequency = "week" + (cart_item[2] > 1 ? "s" : "");
+				break;
+			case "christmas":
+				preview_image = "media/christmas_blahaj.png";
+				item_name = "Christmas Blåhaj";
+				item_price = 32;
+				rental_frequency = "week" + (cart_item[2] > 1 ? "s" : "");
+				break;
+			case "valentine":
+				preview_image = "media/valentine_blahaj.png";
+				item_name = "Valentine Blåhaj";
+				item_price = 7;
+				rental_frequency = "day" + (cart_item[2] > 1 ? "s" : "");
+				break;
 			default:
 				preview_image = "media/image_missing.jpg";
 				item_name = "Unknown";
