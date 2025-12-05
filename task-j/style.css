@@ -506,13 +506,14 @@ h2 {
 	position: absolute;
 	bottom: 4rem;
 	width: calc(100% - 4rem);
-	justify-content: space-evenly;
+	justify-content: space-around;
 	gap: 2rem;
 	height: 3rem;
 }
 
 .popup-response-buttons button {
 	flex: 1;
+	position: relative;
 	top: 4vh;
 	display: inline-block;
 	background: rgba(var(--shark-rgb), 0.95);
