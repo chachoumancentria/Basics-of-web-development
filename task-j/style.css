@@ -491,26 +491,46 @@ h2 {
 	background-color: #dddddd;
 	position: absolute;
 	top: 30vh;
-	left: 30vw;
-	width: 40vw;
+	left: 35vw;
+	width: calc(100vw - (2 * left));
 	height: 40vh;
 	box-sizing: border-box;
 	padding: 2rem;
+
+	border-radius: 1rem;
 }
 
 .popup-response-buttons {
 	display: flex;
 	margin: auto;
 	position: absolute;
-	bottom: 2rem;
+	bottom: 4rem;
 	width: calc(100% - 4rem);
 	justify-content: space-evenly;
-	gap: 1rem;
+	gap: 2rem;
+	height: 3rem;
 }
 
 .popup-response-buttons button {
 	flex: 1;
+	position: relative;
+	top: 4vh;
+	display: inline-block;
+	background: rgba(var(--shark-rgb), 0.95);
+	color: white;
+	padding: 1rem 2rem;
+	border-color: transparent;
+	border-radius: 6px;
+	font-size: 1.1rem;
+	text-decoration: none;
+	transition: 0.2s;
 }
+
+.popup-response-buttons button:hover{
+	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
+	transform: translateY(-0.17rem);
+}
+
 
 
 
