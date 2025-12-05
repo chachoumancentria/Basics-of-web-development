@@ -337,13 +337,31 @@ main {
 	width: calc(100% - 4rem);
 	justify-content: space-evenly;
 	gap: 1rem;
-	height: 2rem;
+	height: 3rem;
 }
 
 .popup-response-buttons button {
 	flex: 1;
 }
 
+.cta-btn {
+	position: relative;
+	top: 4vh;
+	display: inline-block;
+	background: rgba(var(--shark-rgb), 0.95);
+	color: white;
+	padding: 1rem 2rem;
+	border-color: transparent;
+	border-radius: 6px;
+	font-size: 1.1rem;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.cta-btn:hover {
+	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
+	transform: translateY(-0.17rem);
+}
 
 
 
