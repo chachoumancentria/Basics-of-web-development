@@ -342,9 +342,6 @@ main {
 
 .popup-response-buttons button {
 	flex: 1;
-}
-
-.cta-btn {
 	position: relative;
 	top: 4vh;
 	display: inline-block;
@@ -358,7 +355,7 @@ main {
 	transition: 0.2s;
 }
 
-.cta-btn:hover {
+.popup-response-buttons button:hover{
 	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
 	transform: translateY(-0.17rem);
 }
