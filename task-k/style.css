@@ -61,7 +61,8 @@ body {
 	color: var(--shark-white);
 }
 
-#cart-navigation-shortcut, #cart-navigation-shortcut img {
+#cart-navigation-shortcut,
+#cart-navigation-shortcut img {
 	position: fixed;
 	top: 1.4rem;
 	right: calc(40% + 1rem + 2rem);
@@ -186,6 +187,16 @@ body {
 	#logo span {
 		font-size: medium;
 	}
+
+
+	#cart-navigation-shortcut,
+	#cart-navigation-shortcut img {
+		position: fixed;
+		top: 2.7vh;
+		right: 9vh;
+		width: 5vh;
+		height: 4vh;
+	}
 }
 
 header,
@@ -221,6 +232,7 @@ main {
 
 main {
 	display: flex;
+	--border: #626468;
 }
 
 .cart {
@@ -240,7 +252,8 @@ main {
 	min-width: 25rem;
 	height: var(--item-height);
 	display: inline-block;
-	border: 0.2rem solid var(--shark);
+	border: 1px solid var(--border);
+	border-radius: 6px;
 	margin: 0.5rem 0.1rem;
 	padding: 1rem;
 }
@@ -257,11 +270,17 @@ main {
 	object-fit: cover;
 }
 
-.cart-item-details {
-	display: justify;
+.cart-item-interface {
+	display: flex;
+	flex-direction: column;
 	width: 70%;
 	height: var(--item-height);
+}
+
+.cart-item-details {
+	display: justify;
 	position: relative;
+	height: calc(var(--item-height) - 1rem);
 }
 
 .cart-item-details-row {
@@ -281,6 +300,7 @@ main {
 
 .cart-item-details h4 {
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .cart-item-details span {
@@ -289,7 +309,7 @@ main {
 }
 
 .cart-item-details p {
-	margin-top: 0;
+	margin-top: 0.2rem;
 	margin-bottom: 0;
 }
 
@@ -304,11 +324,15 @@ main {
 	border-radius: 10rem;
 }
 
+.cart-item-controls {
+	text-align: right;
+}
+
+
 /* --- Delivery info form --- */
 
 .user-information-form {
-	--input-border:#d0d7e2;
-	--border: #626468;
+	--input-border: #d0d7e2;
 	width: 40%;
 }
 
@@ -354,6 +378,7 @@ main {
 	width: 100%;
 	height: 10rem;
 }
+
 .error {
 	color: red;
 	font-size: calc(0.8*var(--base-size));
@@ -410,7 +435,7 @@ main {
 	transition: 0.2s;
 }
 
-.popup-response-buttons button:hover{
+.popup-response-buttons button:hover {
 	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
 	transform: translateY(-0.17rem);
 }
@@ -431,7 +456,7 @@ footer {
 	h4 {
 		font-size: 2rem;
 	}
-	
+
 	p {
 		font-size: 1rem;
 	}

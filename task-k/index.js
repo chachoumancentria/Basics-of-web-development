@@ -207,6 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			}
 		}
+		if (event.target.classList.contains("cart-item-delete-button")) {
+			cart.splice(item_index, 1);
+		}
 
 		updateCartCookie(cart);
 		updateCartPreview();

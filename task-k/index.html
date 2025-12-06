@@ -161,35 +161,41 @@ Date: 2025-11-27
 					<li class="cart-item" data-index="">
 						<div class="item-contents">
 							<img class="cart-item-image" src="" alt="">
-							<div class="cart-item-details">
-								<h4 class="cart-item-title"></h4>
-								<div class="cart-item-details-row">
-									<p>Quantity:</p>
-									<div class="cart-item-value-field">
-										<button class="shift-button cart-item-quantity-decrease">&lt;</button>
-										<span class="cart-item-quantity"></span>
-										<button class="shift-button cart-item-quantity-increase">&gt;</button>
+							<div class="cart-item-interface">
+								<div class="cart-item-details">
+									<h4 class="cart-item-title"></h4>
+									<div class="cart-item-details-row">
+										<p>Quantity:</p>
+										<div class="cart-item-value-field">
+											<button class="shift-button cart-item-quantity-decrease">&lt;</button>
+											<span class="cart-item-quantity"></span>
+											<button class="shift-button cart-item-quantity-increase">&gt;</button>
+										</div>
 									</div>
+									<div class="cart-item-details-row">
+										<p>Duration:</p>
+										<div class="cart-item-value-field">
+											<button class="shift-button cart-item-duration-decrease">&lt;</button>
+											<span class="cart-item-duration"></span>
+											<button class="shift-button cart-item-duration-increase">&gt;</button>
+										</div>
+									</div>
+									<div class="cart-item-details-row">
+										<p>Price per unit:</p>
+										<div class="cart-item-value-field">
+											<span class="cart-item-price-per-unit"></span>
+										</div>
+									</div>
+									<div class="cart-item-details-row cart-item-total-line">
+										<p>Total:</p>
+										<div class="cart-item-value-field">
+											<span class="cart-item-price-total"></span>
+										</div>
+									</div>
+
 								</div>
-								<div class="cart-item-details-row">
-									<p>Duration:</p>
-									<div class="cart-item-value-field">
-										<button class="shift-button cart-item-duration-decrease">&lt;</button>
-										<span class="cart-item-duration"></span>
-										<button class="shift-button cart-item-duration-increase">&gt;</button>
-									</div>
-								</div>
-								<div class="cart-item-details-row">
-									<p>Price per unit:</p>
-									<div class="cart-item-value-field">
-										<span class="cart-item-price-per-unit"></span>
-									</div>
-								</div>
-								<div class="cart-item-details-row cart-item-total-line">
-									<p>Total:</p>
-									<div class="cart-item-value-field">
-										<span class="cart-item-price-total"></span>
-									</div>
+								<div class="cart-item-controls">
+									<button class="shift-button cart-item-delete-button">Delete item</button>
 								</div>
 							</div>
 						</div>
@@ -230,7 +236,7 @@ Date: 2025-11-27
 						<br>
 
 						<div class="form-row">
-							<input type="checkbox" name="terms" id ="terms">
+							<input type="checkbox" name="terms" id="terms">
 							<label>Accept <a target="_blank" href="terms.html">Terms & Conditions</a>*</label>
 							<p class="error" id="termsError"></p>
 						</div>
