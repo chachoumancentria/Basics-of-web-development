@@ -232,19 +232,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	const newsAccepted = document.getElementById("newsletter"); //
 
 	// Delivery information
-	const streetInput = document.getElementById("street");
+	const streetInput = document.getElementById("street-name");
 	const cityInput = document.getElementById("city");
-	const postalCodeInput = document.getElementById("postalCode");
+	const postalCodeInput = document.getElementById("postal-code");
 	const countryInput = document.getElementById("country");
 
 	// Special request
-	const requestInput = document.getElementById("request");
+	const requestInput = document.getElementById("wishes");
 
 	// Payment information
-	const cardNameInput = document.getElementById("cardName");
-	const cardNumberInput = document.getElementById("cardNumber");
-	const expiryDateInput = document.getElementById("expiryDate");
-	const cvcInput = document.getElementById("cvc");
+	const cardNameInput = document.getElementById("card-name");
+	const cardNumberInput = document.getElementById("card-number");
+	const expiryDateInput = document.getElementById("card-expiry");
+	const cvcInput = document.getElementById("card-cvc");
 
 
 	function initTimestamp() {
@@ -389,18 +389,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	function checkPostalCodeInput() {
 		const pc = postalCodeInput.value.trim();
 		if (!pc) {
-			document.getElementById("postalCodeError").innerHTML = "Please enter a postal code";
+			document.getElementById("postalError").innerHTML = "Please enter a postal code";
 			console.warn("WARNING: No postal code given");
 			postalCodeInput.focus();
 			return false;
 		}
 		if (pc.length < 3 || pc.length > 10) {
-			document.getElementById("postalCodeError").innerHTML = "Postal code length seems invalid";
+			document.getElementById("postalError").innerHTML = "Postal code length seems invalid";
 			console.warn("WARNING: Postal code length invalid");
 			postalCodeInput.focus();
 			return false;
 		}
-		document.getElementById("postalCodeError").innerHTML = "";
+		document.getElementById("postalError").innerHTML = "";
 		return true;
 	}
 
@@ -419,47 +419,47 @@ document.addEventListener("DOMContentLoaded", () => {
 	function checkRequestInput() {
 		const req = requestInput.value.trim();
 		if (!req) {
-			document.getElementById("requestError").innerHTML = "";
+			document.getElementById("wishesError").innerHTML = "";
 			return true;
 		}
 		if (req.length > 500) {
-			document.getElementById("requestError").innerHTML = "Request is too long (max 500 chars)";
+			document.getElementById("wishesError").innerHTML = "Request is too long (max 500 chars)";
 			console.warn("WARNING: Special request too long");
 			requestInput.focus();
 			return false;
 		}
-		document.getElementById("requestError").innerHTML = "";
+		document.getElementById("wishesError").innerHTML = "";
 		return true;
 	}
 
 	function checkCardNameInput() {
 		const cardName = cardNameInput.value.trim();
 		if (!cardName) {
-			document.getElementById("nameError").innerHTML = "Please the card holder's name";
+			document.getElementById("cardNameError").innerHTML = "Please the card holder's name";
 			console.warn("WARNING: No name was given");
 			nameInput.focus();
 			return false;
 		}
 		if (!cardName.includes(" ")) {
-			document.getElementById("nameError").innerHTML = "Please enter first name, and last name";
+			document.getElementById("cardNameError").innerHTML = "Please enter first name, and last name";
 			console.warn("WARNING: Card name must contain two parts");
 			nameInput.focus();
 			return false;
 		}
 		if (cardName.split(" ")[0].length < 2) {
-			document.getElementById("nameError").innerHTML = "First name should be more than 2 letters";
+			document.getElementById("cardNameError").innerHTML = "First name should be more than 2 letters";
 			console.warn("WARNING: First name should be more than 2 letters");
 			nameInput.focus();
 			return false;
 		}
 		if (cardName.split(" ")[cardName.split(" ").length - 1].length < 2) {
-			document.getElementById("nameError").innerHTML = "Last name should be more than 2 letters";
+			document.getElementById("cardNameError").innerHTML = "Last name should be more than 2 letters";
 			console.warn("WARNING: Last name should be more than 2 letters");
 			nameInput.focus();
 			return false;
 		}
 		console.info("INFO: Full name was correctly given");
-		document.getElementById("nameError").innerHTML = "";
+		document.getElementById("cardNameError").innerHTML = "";
 		return true;
 	}
 
@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function checkExpiryDateInput() {
 		const expiry = expiryDateInput.value.trim();
 		if (!expiry) {
-			document.getElementById("dateError").innerHTML = "Please enter an expiry date";
+			document.getElementById("cardExpiryError").innerHTML = "Please enter an expiry date";
 			console.warn("WARNING: No expiry date was given");
 			expiryDateInput.focus();
 			return false;
@@ -495,13 +495,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		const expiryDate = new Date(parts[0], parts[1]);
 
 		if (expiryDate < currentDate) {
-			document.getElementById("dateError").innerHTML = "Your card is expired";
+			document.getElementById("cardExpiryError").innerHTML = "Your card is expired";
 			console.warn("WARNING: Card is expired");
 			expiryDateInput.focus();
 			return false;
 		}
 
-		document.getElementById("dateError").innerHTML = "";
+		document.getElementById("cardExpiryError").innerHTML = "";
 		console.info("INFO: expiry date is valid");
 		return true;
 	}
@@ -509,18 +509,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	function checkCvcInput() {
 		const cvc = cvcInput.value.trim();
 		if (!cvc) {
-			document.getElementById("cvcError").innerHTML = "Please enter CVC";
+			document.getElementById("cardCVCError").innerHTML = "Please enter CVC";
 			console.warn("WARNING: No CVC given");
 			cvcInput.focus();
 			return false;
 		}
 		if (cvc.length < 3 || cvc.length > 4) {
-			document.getElementById("cvcError").innerHTML = "CVC must be 3 or 4 digits";
+			document.getElementById("cardCVCError").innerHTML = "CVC must be 3 or 4 digits";
 			console.warn("WARNING: Invalid CVC");
 			cvcInput.focus();
 			return false;
 		}
-		document.getElementById("cvcError").innerHTML = "";
+		document.getElementById("cardCVCError").innerHTML = "";
 		return true;
 	}
 
