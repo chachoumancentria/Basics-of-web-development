@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 
-		if (luhnChecker(parseInt(num))) {
+		if (!luhnChecker(parseInt(num))) {
 			document.getElementById("cardNumberError").innerHTML = "Invalid card number";
 			console.warn("WARNING: Card number is invalid");
 			cardNumberInput.focus();
