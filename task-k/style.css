@@ -378,6 +378,21 @@ main {
 	width: 100%;
 	height: 10rem;
 }
+#client-details button[type=submit] {
+	display: block;
+	background: rgba(var(--shark-rgb), 0.95);
+	color: white;
+	padding: 1rem 2rem;
+	border-color: transparent;
+	border-radius: 6px;
+	font-size: 1.1rem;
+	text-decoration: none;
+	transition: 0.2s;
+}
+#client-details button[type=submit]:hover {
+	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
+	transform: translateY(-0.17rem);
+}
 
 .error {
 	color: red;

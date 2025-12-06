@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-	const form = document.getElementById("addRowForm");
+	const form = document.getElementById("client-details");
 
 	// Personal information
 	const timeStamp = document.getElementById("timeStamp");
@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			streetInput.focus();
 			return false;
 		}
-		if(parseInt(street) == NULL) {
+		if (parseInt(street) == null) {
 			document.getElementById("streetError").innerHTML = "Street address must contain a number";
 			console.warn("WARNING: Street address must contain a number");
 			streetInput.focus();
@@ -437,25 +437,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (!cardName) {
 			document.getElementById("cardNameError").innerHTML = "Please the card holder's name";
 			console.warn("WARNING: No name was given");
-			nameInput.focus();
+			cardNameInput.focus();
 			return false;
 		}
 		if (!cardName.includes(" ")) {
 			document.getElementById("cardNameError").innerHTML = "Please enter first name, and last name";
 			console.warn("WARNING: Card name must contain two parts");
-			nameInput.focus();
+			cardNameInput.focus();
 			return false;
 		}
 		if (cardName.split(" ")[0].length < 2) {
 			document.getElementById("cardNameError").innerHTML = "First name should be more than 2 letters";
 			console.warn("WARNING: First name should be more than 2 letters");
-			nameInput.focus();
+			cardNameInput.focus();
 			return false;
 		}
 		if (cardName.split(" ")[cardName.split(" ").length - 1].length < 2) {
 			document.getElementById("cardNameError").innerHTML = "Last name should be more than 2 letters";
 			console.warn("WARNING: Last name should be more than 2 letters");
-			nameInput.focus();
+			cardNameInput.focus();
 			return false;
 		}
 		console.info("INFO: Full name was correctly given");
@@ -532,21 +532,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		return true;
 	}
 
-	checkNameInput();
-	checkEmailInput();
-	checkPhoneInput();
-	checkTermsInput();
-	checkStreetInput();
-	checkCityInput();
-	checkPostalCodeInput();
-	checkCountryInput();
-	checkRequestInput();
-	checkCardNameInput();
-	checkCardNumberInput();
-	checkExpiryDateInput();
-	checkCvcInput();
-	checkNewsletterInput();
-
 	nameInput.addEventListener("input", checkNameInput);
 	emailInput.addEventListener("input", checkEmailInput);
 	phoneInput.addEventListener("input", checkPhoneInput);
@@ -567,13 +552,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	newsAccepted.addEventListener("change", checkNewsletterInput);
 
 
-	// initialize on load
-	initTimestamp();
-	// expose runQuickTests for manual triggering in console
-	window.runQuickTests = runQuickTests;
-
-
-
 	// remove unwanted characters from the tel input
 	phoneInput.addEventListener("input", () => {
 		const filteredPhoneNumber = phoneInput.value.replace(/[^+0-9]/g, "");
@@ -582,4 +560,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// add for card number + expiry date
 
+
+
+
+	form.addEventListener("submit", () => {
+		const cartInput = document.getElementById("cart-input");
+
+		var cookies = document.cookie.split("; ")
+
+		for (let i = 0; i < cookies.length; i++) {
+			if (cookies[i].startsWith("cart=")) {
+				cartInput.value = cookies[i].split("=")[1];
+				break;
+			}
+		}
+	});
 });

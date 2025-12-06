@@ -213,7 +213,7 @@ Date: 2025-11-27
 			<section class="user-information-form">
 				<h2>Delivery Information</h2>
 				<form id="client-details">
-					<input name="cart" type="text" hidden>
+					<input name="cart" type="text" id="cart-input" hidden>
 					<fieldset class="personal-info">
 						<h3>Personal information</h3>
 						<div class="form-row">
@@ -241,7 +241,7 @@ Date: 2025-11-27
 							<p class="error" id="termsError"></p>
 						</div>
 						<div class="form-row">
-							<input type="checkbox" name="newsletter" checked>
+							<input type="checkbox" name="newsletter" id="newsletter" checked>
 							<label>Receive news and deals in your inbox</label>
 						</div>
 					</fieldset>
@@ -311,6 +311,8 @@ Date: 2025-11-27
 						</div>
 					</fieldset>
 					<p>NOTE: Fields with <b style="color: red;"> *</b> are mandatory;</p>
+
+					<button type="submit">Proceed to checkout</button>
 				</form>
 			</section>
 		</main>
