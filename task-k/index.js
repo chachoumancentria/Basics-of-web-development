@@ -223,11 +223,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const form = document.getElementById("addRowForm");
 
+	// Personal information
 	const timeStamp = document.getElementById("timeStamp");
 	const nameInput = document.getElementById("fullName");
 	const emailInput = document.getElementById("email");
 	const phoneInput = document.getElementById("tel");
 	const termsAccepted = document.getElementById("terms");
+	const newsAccepted = document.getElementById("newsletter"); //
+
+	// Delivery information
+	const streetInput = document.getElementById("street");
+	const cityInput = document.getElementById("city");
+	const postalCodeInput = document.getElementById("postalCode");
+	const countryInput = document.getElementById("country");
+
+	// Special request
+	const requestInput = document.getElementById("request");
+
+	// Payment information
+	const cardNameInput = document.getElementById("cardName");
+	const cardNumberInput = document.getElementById("cardNumber");
+	const expiryDateInput = document.getElementById("expiryDate");
+	const cvcInput = document.getElementById("cvc");
+
+
+	function initTimestamp() {
+		const now = new Date();
+		timeStamp.value = now.toISOString();
+	}
 
 	function checkNameInput() {
 		const fullName = nameInput.value.trim();
@@ -269,7 +292,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			return false;
 		}
 		const emailComponents = email.split("@");
-		// verify if the email follows the XXX@XXX.XX pattern
 		if (!email.includes("@") || !emailComponents[emailComponents.length - 1].includes(".")) {
 			document.getElementById("emailError").innerHTML = "Please enter a valid email";
 			console.warn("WARNING: Full name must contain two parts");
@@ -311,27 +333,253 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.getElementById("telError").innerHTML = "";
 		return true;
 	}
+
 	function checkTermsInput() {
 		if (!termsAccepted.checked) {
-			document.getElementById("termsError").innerHTML = "This is mandatory";
+			document.getElementById("termsError").innerHTML = "Please accept the Terms of Service";
 			console.warn("WARNING: Terms of Service must be accepted");
 			return false;
 		}
 		document.getElementById("termsError").innerHTML = "";
 		return true;
-		
 	}
 
-	// Verify the input on each modification
+	function checkStreetInput() { // add num check
+		const street = streetInput.value.trim();
+		if (!street) {
+			document.getElementById("streetError").innerHTML = "Please enter a street address";
+			console.warn("WARNING: No street address given");
+			streetInput.focus();
+			return false;
+		}
+		if(parseInt(street) == NULL) {
+			document.getElementById("streetError").innerHTML = "Street address must contain a number";
+			console.warn("WARNING: Street address must contain a number");
+			streetInput.focus();
+			return false;
+		}
+		if (street.length < 3) {
+			document.getElementById("streetError").innerHTML = "Street address is too short";
+			console.warn("WARNING: Street address too short");
+			streetInput.focus();
+			return false;
+		}
+		document.getElementById("streetError").innerHTML = "";
+		return true;
+	}
+
+	function checkCityInput() {
+		const city = cityInput.value.trim();
+		if (!city) {
+			document.getElementById("cityError").innerHTML = "Please enter a city";
+			console.warn("WARNING: No city given");
+			cityInput.focus();
+			return false;
+		}
+		if (city.length < 2) {
+			document.getElementById("cityError").innerHTML = "City name is too short";
+			console.warn("WARNING: City name too short");
+			cityInput.focus();
+			return false;
+		}
+		document.getElementById("cityError").innerHTML = "";
+		return true;
+	}
+
+	function checkPostalCodeInput() {
+		const pc = postalCodeInput.value.trim();
+		if (!pc) {
+			document.getElementById("postalCodeError").innerHTML = "Please enter a postal code";
+			console.warn("WARNING: No postal code given");
+			postalCodeInput.focus();
+			return false;
+		}
+		if (pc.length < 3 || pc.length > 10) {
+			document.getElementById("postalCodeError").innerHTML = "Postal code length seems invalid";
+			console.warn("WARNING: Postal code length invalid");
+			postalCodeInput.focus();
+			return false;
+		}
+		document.getElementById("postalCodeError").innerHTML = "";
+		return true;
+	}
+
+	function checkCountryInput() {
+		const country = countryInput.value.trim();
+		if (!country) {
+			document.getElementById("countryError").innerHTML = "Please enter a country";
+			console.warn("WARNING: No country given");
+			countryInput.focus();
+			return false;
+		}
+		document.getElementById("countryError").innerHTML = "";
+		return true;
+	}
+
+	function checkRequestInput() {
+		const req = requestInput.value.trim();
+		if (!req) {
+			document.getElementById("requestError").innerHTML = "";
+			return true;
+		}
+		if (req.length > 500) {
+			document.getElementById("requestError").innerHTML = "Request is too long (max 500 chars)";
+			console.warn("WARNING: Special request too long");
+			requestInput.focus();
+			return false;
+		}
+		document.getElementById("requestError").innerHTML = "";
+		return true;
+	}
+
+	function checkCardNameInput() {
+		const cardName = cardNameInput.value.trim();
+		if (!cardName) {
+			document.getElementById("nameError").innerHTML = "Please the card holder's name";
+			console.warn("WARNING: No name was given");
+			nameInput.focus();
+			return false;
+		}
+		if (!cardName.includes(" ")) {
+			document.getElementById("nameError").innerHTML = "Please enter first name, and last name";
+			console.warn("WARNING: Card name must contain two parts");
+			nameInput.focus();
+			return false;
+		}
+		if (cardName.split(" ")[0].length < 2) {
+			document.getElementById("nameError").innerHTML = "First name should be more than 2 letters";
+			console.warn("WARNING: First name should be more than 2 letters");
+			nameInput.focus();
+			return false;
+		}
+		if (cardName.split(" ")[cardName.split(" ").length - 1].length < 2) {
+			document.getElementById("nameError").innerHTML = "Last name should be more than 2 letters";
+			console.warn("WARNING: Last name should be more than 2 letters");
+			nameInput.focus();
+			return false;
+		}
+		console.info("INFO: Full name was correctly given");
+		document.getElementById("nameError").innerHTML = "";
+		return true;
+	}
+
+	function checkCardNumberInput() {
+		const num = cardNumberInput.value.trim();
+		if (!num) {
+			document.getElementById("cardNumberError").innerHTML = "Please enter the card number";
+			console.warn("WARNING: No card number given");
+			cardNumberInput.focus();
+			return false;
+		}
+		if (num.length < 8 || num.length > 19) {
+			document.getElementById("cardNumberError").innerHTML = "Invalid card number length";
+			console.warn("WARNING: Card number with invalid length");
+			cardNumberInput.focus();
+			return false;
+		}
+		document.getElementById("cardNumberError").innerHTML = "";
+		return true;
+	}
+
+	function checkExpiryDateInput() {
+		const expiry = expiryDateInput.value.trim();
+		if (!expiry) {
+			document.getElementById("dateError").innerHTML = "Please enter an expiry date";
+			console.warn("WARNING: No expiry date was given");
+			expiryDateInput.focus();
+			return false;
+		}
+
+		const parts = expiry.split("-").map(x => parseInt(x));
+		const currentDate = new Date();
+		const expiryDate = new Date(parts[0], parts[1]);
+
+		if (expiryDate < currentDate) {
+			document.getElementById("dateError").innerHTML = "Your card is expired";
+			console.warn("WARNING: Card is expired");
+			expiryDateInput.focus();
+			return false;
+		}
+
+		document.getElementById("dateError").innerHTML = "";
+		console.info("INFO: expiry date is valid");
+		return true;
+	}
+
+	function checkCvcInput() {
+		const cvc = cvcInput.value.trim();
+		if (!cvc) {
+			document.getElementById("cvcError").innerHTML = "Please enter CVC";
+			console.warn("WARNING: No CVC given");
+			cvcInput.focus();
+			return false;
+		}
+		if (cvc.length < 3 || cvc.length > 4) {
+			document.getElementById("cvcError").innerHTML = "CVC must be 3 or 4 digits";
+			console.warn("WARNING: Invalid CVC");
+			cvcInput.focus();
+			return false;
+		}
+		document.getElementById("cvcError").innerHTML = "";
+		return true;
+	}
+
+	function checkNewsletterInput() {
+		// optional: no error, but log choice
+		if (newsAccepted.checked) {
+			console.info("INFO: User subscribed to newsletter");
+		}
+		return true;
+	}
+
+	checkNameInput();
+	checkEmailInput();
+	checkPhoneInput();
+	checkTermsInput();
+	checkStreetInput();
+	checkCityInput();
+	checkPostalCodeInput();
+	checkCountryInput();
+	checkRequestInput();
+	checkCardNameInput();
+	checkCardNumberInput();
+	checkExpiryDateInput();
+	checkCvcInput();
+	checkNewsletterInput();
+
 	nameInput.addEventListener("input", checkNameInput);
 	emailInput.addEventListener("input", checkEmailInput);
 	phoneInput.addEventListener("input", checkPhoneInput);
 	termsAccepted.addEventListener("click", checkTermsInput);
+
+	streetInput.addEventListener("input", checkStreetInput);
+	cityInput.addEventListener("input", checkCityInput);
+	postalCodeInput.addEventListener("input", checkPostalCodeInput);
+	countryInput.addEventListener("input", checkCountryInput);
+
+	requestInput.addEventListener("input", checkRequestInput);
+
+	cardNameInput.addEventListener("input", checkCardNameInput);
+	cardNumberInput.addEventListener("input", checkCardNumberInput);
+	expiryDateInput.addEventListener("input", checkExpiryDateInput);
+	cvcInput.addEventListener("input", checkCvcInput);
+
+	newsAccepted.addEventListener("change", checkNewsletterInput);
+
+
+	// initialize on load
+	initTimestamp();
+	// expose runQuickTests for manual triggering in console
+	window.runQuickTests = runQuickTests;
+
+
 
 	// remove unwanted characters from the tel input
 	phoneInput.addEventListener("input", () => {
 		const filteredPhoneNumber = phoneInput.value.replace(/[^+0-9]/g, "");
 		phoneInput.value = filteredPhoneNumber;
 	});
+
+	// add for card number + expiry date
 
 });
