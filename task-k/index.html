@@ -212,34 +212,34 @@ Date: 2025-11-27
 
 			<section class="user-information-form">
 				<h2>Delivery Information</h2>
-				<form id="client-details">
+				<form id="client-details" novalidate="">
 					<input name="cart" type="text" id="cart-input" hidden>
 					<fieldset class="personal-info">
 						<h3>Personal information</h3>
 						<div class="form-row">
 							<label for="fullName">Full Name <b style="color: red;"> *</b>:</label>
 							<input id="fullName" name="fullName" type="text" required placeholder="John Doe" />
-							<p class="error" id="nameError"></p>
 						</div>
+						<p class="error" id="nameError"></p>
 
 						<div class="form-row">
 							<label for="email">Email <b style="color: red;"> *</b>:</label>
 							<input id="email" name="email" type="text" required placeholder="john.doe@example.com" />
-							<p class="error" id="emailError"></p>
 						</div>
+						<p class="error" id="emailError"></p>
 
 						<div class="form-row">
 							<label for="tel">Phone Number <b style="color: red;"> *</b>:</label>
 							<input id="tel" name="tel" type="tel" required placeholder="+358 12345678" />
-							<p class="error" id="telError"></p>
 						</div>
+						<p class="error" id="telError"></p>
 						<br>
 
 						<div class="form-row">
 							<input type="checkbox" name="terms" id="terms">
 							<label>Accept <a target="_blank" href="terms.html">Terms & Conditions</a>*</label>
-							<p class="error" id="termsError"></p>
 						</div>
+						<p class="error" id="termsError"></p>
 						<div class="form-row">
 							<input type="checkbox" name="newsletter" id="newsletter" checked>
 							<label>Receive news and deals in your inbox</label>
@@ -253,23 +253,23 @@ Date: 2025-11-27
 						<div class="form-row">
 							<label for="street-name">Street Name & Number <b style="color: red;"> *</b>:</label>
 							<input id="street-name" name="street-name" type="text" required placeholder="" />
-							<p class="error" id="streetError"></p>
 						</div>
+						<p class="error" id="streetError"></p>
 						<div class="form-row">
 							<label for="city">City <b style="color: red;"> *</b>:</label>
 							<input id="city" name="city" type="text" required placeholder="" />
-							<p class="error" id="cityError"></p>
 						</div>
+						<p class="error" id="cityError"></p>
 						<div class="form-row">
 							<label for="postal-code">Postal Code <b style="color: red;"> *</b>:</label>
 							<input id="postal-code" name="postal-code" type="text" required placeholder="" />
-							<p class="error" id="postalError"></p>
 						</div>
+						<p class="error" id="postalError"></p>
 						<div class="form-row">
 							<label for="country">Country <b style="color: red;"> *</b>:</label>
 							<input id="country" name="country" type="text" required placeholder="" />
-							<p class="error" id="countryError"></p>
 						</div>
+						<p class="error" id="countryError"></p>
 					</fieldset>
 
 
@@ -291,24 +291,24 @@ Date: 2025-11-27
 						<div class="form-row">
 							<label for="card-name">Name on card <b style="color: red;"> *</b>:</label>
 							<input id="card-name" name="card-name" type="text" required placeholder="John Doe" />
-							<p class="error" id="cardNameError"></p>
 						</div>
+						<p class="error" id="cardNameError"></p>
 						<div class="form-row">
 							<label for="card-number">Card Number <b style="color: red;"> *</b>:</label>
 							<input id="card-number" name="card-number" type="text" required
 								placeholder="1234 5678 9123 4567" />
-							<p class="error" id="cardNumberError"></p>
 						</div>
+						<p class="error" id="cardNumberError"></p>
 						<div class="form-row">
 							<label for="card-expiry">Expiry Date <b style="color: red;"> *</b>:</label>
 							<input id="card-expiry" name="card-expiry" type="text" required placeholder="12.25" />
-							<p class="error" id="cardExpiryError"></p>
 						</div>
+						<p class="error" id="cardExpiryError"></p>
 						<div class="form-row">
 							<label for="card-cvc">CVC <b style="color: red;"> *</b>:</label>
 							<input id="card-cvc" name="card-cvc" type="text" required placeholder="123" />
-							<p class="error" id="cardCVCError"></p>
 						</div>
+						<p class="error" id="cardCVCError"></p>
 					</fieldset>
 					<p>NOTE: Fields with <b style="color: red;"> *</b> are mandatory;</p>
 

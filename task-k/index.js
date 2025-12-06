@@ -477,6 +477,35 @@ document.addEventListener("DOMContentLoaded", () => {
 			cardNumberInput.focus();
 			return false;
 		}
+
+
+		function luhnChecker(cardNumber) {
+			const digits = String(cardNumber).split('').map(Number);
+			let sum = 0;
+			let shouldDouble = false;
+
+			for (let i = digits.length - 1; i >= 0; i--) {
+				let d = digits[i];
+
+				if (shouldDouble) {
+					d *= 2;
+					if (d > 9) d -= 9;
+				}
+
+				sum += d;
+				shouldDouble = !shouldDouble;
+			}
+
+			return sum % 10 === 0;
+		}
+
+
+		if (luhnChecker(parseInt(num))) {
+			document.getElementById("cardNumberError").innerHTML = "Invalid card number";
+			console.warn("WARNING: Card number is invalid");
+			cardNumberInput.focus();
+			return false;
+		}
 		document.getElementById("cardNumberError").innerHTML = "";
 		return true;
 	}
@@ -563,7 +592,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-	form.addEventListener("submit", () => {
+	form.addEventListener("submit", (event) => {
+		event.preventDefault();
 		const cartInput = document.getElementById("cart-input");
 
 		var cookies = document.cookie.split("; ")
@@ -574,5 +604,46 @@ document.addEventListener("DOMContentLoaded", () => {
 				break;
 			}
 		}
+
+		// Last checks before submitting
+		let all_checks_passed = true;
+		if (!checkCvcInput()) all_checks_passed = false;
+		if (!checkExpiryDateInput()) all_checks_passed = false;
+		if (!checkCardNumberInput()) all_checks_passed = false;
+		if (!checkCardNameInput()) all_checks_passed = false;
+		if (!checkRequestInput()) all_checks_passed = false;
+		if (!checkPostalCodeInput()) all_checks_passed = false;
+		if (!checkCityInput()) all_checks_passed = false;
+		if (!checkCountryInput()) all_checks_passed = false;
+		if (!checkStreetInput()) all_checks_passed = false;
+		if (!checkTermsInput()) all_checks_passed = false;
+		if (!checkPhoneInput()) all_checks_passed = false;
+		if (!checkEmailInput()) all_checks_passed = false;
+		if (!checkNameInput()) all_checks_passed = false;
+
+		if (all_checks_passed) {
+			this.submit();
+		}
+
+
+		/*if (1) { // If order was succesful (server side checks)
+			deleteCart();
+	
+			const popup_container = document.createElement("div");
+			popup_container.className = "popup-container";
+	
+			popup_container.innerHTML = `<div class="popup-content">
+												<h2>Your order has been sent</h2>
+												<p>A receipt has been sent to your email.</p>
+												<div class="popup-response-buttons">
+													<button id="popup-ok-button">Remove</button>
+												</div>
+											</div>`;
+			document.body.appendChild(popup_container);
+	
+			document.getElementById("popup-ok-button").addEventListener("click", () => {
+				document.querySelector(".popup-container").remove();
+			});
+		}*/
 	});
 });

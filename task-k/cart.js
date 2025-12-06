@@ -49,7 +49,6 @@ function deleteCartItem(index) {
 }
 function deleteCart() {
 	document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
-	updateCartPreview();
 }
 
 document.addEventListener("DOMContentLoaded", () => { 
