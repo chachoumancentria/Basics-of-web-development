@@ -32,7 +32,7 @@ function updateCartPreview() {
 	if (cart_items.length == 0) {
 		console.warn("WARNING: Empty cart, aborting DOM update.");
 
-		cart_DOM.innerHTML = "Seems like your cart is empty...<a href=\"../task-j/index.html\">Check out our catalog</a>";
+		cart_DOM.innerHTML = "Seems like your cart is empty...<a href=\"index.html\">Check out our catalog</a>";
 		return;
 	}
 
