@@ -277,4 +277,8 @@
 		width: 80%;
 		margin: auto;
 	}
+
+	.shade-mid {
+		background-repeat: repeat;
+	}
 }
