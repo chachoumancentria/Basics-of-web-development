@@ -218,7 +218,6 @@ section {
 h1,
 h2 {
 	margin-top: 0;
-	size: 2rem;
 	font-weight: 700;
 }
 
@@ -235,6 +234,14 @@ main {
 	--border: #626468;
 }
 
+@media (orientation: portrait) {
+	main {
+		display: block;
+	}
+}
+
+
+/* CART PREVIEW */
 .cart {
 	width: 40vw;
 	min-width: 25rem;
@@ -278,7 +285,6 @@ main {
 }
 
 .cart-item-details {
-	display: justify;
 	position: relative;
 	height: calc(var(--item-height) - 1rem);
 }
@@ -328,8 +334,34 @@ main {
 	text-align: right;
 }
 
+@media (orientation: portrait) {
+	.cart {
+		margin: auto;
+	}
+}
 
-/* --- Delivery info form --- */
+@media (width < 30rem) {
+	.cart {
+		min-width: 15rem;
+	}
+	.cart-item {
+		max-width: 80vw;
+		width: 30vw;
+		min-width: 15rem;
+	}
+
+	.cart-item img {
+		display: none;
+	}
+
+	.cart-item-interface {
+		width: 100%;
+	}
+}
+
+
+
+/* DELIVERY INFO FORM */
 
 .user-information-form {
 	--input-border: #d0d7e2;
@@ -402,102 +434,4 @@ main {
 	color: red;
 	margin: 0rem;
 	font-size: calc(0.8*var(--base-size));
-}
-
-
-.popup-container {
-	background-color: rgba(0, 0, 0, 0.7);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 10;
-}
-
-.popup-content {
-	background-color: #dddddd;
-	position: absolute;
-	--popup-width: 40vw;
-	width: var(--popup-width);
-	top: 30vh;
-	left: calc(50vw - var(--popup-width) / 2);
-	height: 40vh;
-	box-sizing: border-box;
-	padding: 2rem;
-
-	border-radius: 1rem;
-}
-
-.popup-response-buttons {
-	display: flex;
-	margin: auto;
-	position: absolute;
-	bottom: 4rem;
-	width: calc(100% - 4rem);
-	justify-content: space-around;
-	gap: 1rem;
-	height: 3rem;
-}
-
-.popup-response-buttons button {
-	flex: 1;
-	position: relative;
-	top: 4vh;
-	display: inline-block;
-	background: rgba(var(--shark-rgb), 0.95);
-	color: white;
-	padding: 1rem 2rem;
-	border-color: transparent;
-	border-radius: 6px;
-	font-size: 1.1rem;
-	text-decoration: none;
-	transition: 0.2s;
-}
-
-.popup-response-buttons button:hover {
-	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
-	transform: translateY(-0.17rem);
-}
-
-
-
-
-/* --- Footer --- */
-footer {
-	background: #1a1a1a;
-	color: #dddddd;
-	text-align: center;
-	padding: 40px 20px;
-	font-size: 0.9rem;
-}
-
-@media (orientation: portrait) {
-	h4 {
-		font-size: 2rem;
-	}
-
-	p {
-		font-size: 1rem;
-	}
-
-	main {
-		display: block;
-	}
-
-	.popup-content {
-		--popup-width: 80vw;
-	}
-}
-
-@media (orientation: portrait) {
-	.desktop {
-		display: none;
-	}
-}
-
-@media (orientation: landscape) {
-	.mobile {
-		display: none;
-	}
 }

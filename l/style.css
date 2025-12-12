@@ -200,10 +200,11 @@ body {
 	position: absolute;
 	/* CONFLICT: position/width différaient ; j'ai choisi une solution flexible centrée */
 	--popup-width: 40vw;
+	--popup-height: 40vh;
 	width: var(--popup-width);
-	top: 30vh;
+	height: var(--popup-height);
+	top: calc(50vh - var(--popup-height) / 2);
 	left: calc(50vw - var(--popup-width) / 2);
-	height: 40vh;
 	box-sizing: border-box;
 	padding: 2rem;
 
@@ -311,7 +312,16 @@ footer {
 	}
 
 	.popup-content {
-		--popup-width: 80vw;
+		--popup-width: 90vw;
+		--popup-height: 50vh;
+	}
+
+	.popup-response-buttons {
+		height: 4rem;
+	}
+
+	.popup-response-buttons button {
+		padding: 0.5rem;
 	}
 }
 
