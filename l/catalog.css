@@ -132,6 +132,9 @@
 	width: 100%;
 	aspect-ratio: 2/3;
 	perspective: 250rem;
+	max-height: 40rem;
+	max-width: 25rem;
+	margin: auto;
 }
 
 .card-inner {
@@ -174,7 +177,7 @@
 	width: 100%;
 	display: block;
 	height: 70%;
-	max-height: 25rem;
+	max-height: 35rem;
 }
 
 .card h3 {
@@ -182,7 +185,7 @@
 }
 
 .card p {
-	font-size: 1rem;
+	font-size: 1em;
 	width: 80%;
 	margin: auto;
 	text-align: center;
