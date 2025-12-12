@@ -234,7 +234,7 @@ main {
 	--border: #626468;
 }
 
-@media (orientation: portrait) {
+@media (width < 60rem) {
 	main {
 		display: block;
 	}
@@ -268,6 +268,7 @@ main {
 .cart-item .item-contents {
 	display: flex;
 	gap: 1rem;
+	height: var(--item-height);
 }
 
 .cart-item img {
@@ -316,13 +317,13 @@ main {
 
 .cart-item-details p {
 	margin-top: 0.2rem;
-	margin-bottom: 0;
+	margin-bottom: 0rem;
 }
 
 .cart-item-total-line {
 	margin-top: 1rem;
 	position: absolute;
-	bottom: 0;
+	bottom: 0rem;
 }
 
 .shift-button {
@@ -332,9 +333,10 @@ main {
 
 .cart-item-controls {
 	text-align: right;
+	min-height: 1rem;
 }
 
-@media (orientation: portrait) {
+@media (width < 70rem) {
 	.cart {
 		margin: auto;
 	}
@@ -342,12 +344,21 @@ main {
 
 @media (width < 30rem) {
 	.cart {
-		min-width: 15rem;
+		min-width: 17rem;
 	}
+
+	.cart-item-details {
+		height: calc(var(--item-height) - 4rem);
+	}
+
+	.cart-item-details h4 {
+		font-size: 1.5rem;
+	}
+
 	.cart-item {
-		max-width: 80vw;
-		width: 30vw;
-		min-width: 15rem;
+		min-width: 17rem;
+		box-sizing: border-box;
+		--item-height: 17rem;
 	}
 
 	.cart-item img {
@@ -374,6 +385,7 @@ main {
 	padding: 2rem;
 	padding-top: 1rem;
 	margin-bottom: 1rem;
+	width: 100%;
 }
 
 .personal-info {
@@ -414,6 +426,7 @@ main {
 	width: 100%;
 	height: 10rem;
 }
+
 #client-details button[type=submit] {
 	display: block;
 	background: rgba(var(--shark-rgb), 0.95);
@@ -425,6 +438,7 @@ main {
 	text-decoration: none;
 	transition: 0.2s;
 }
+
 #client-details button[type=submit]:hover {
 	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
 	transform: translateY(-0.17rem);
@@ -435,3 +449,37 @@ main {
 	margin: 0rem;
 	font-size: calc(0.8*var(--base-size));
 }
+
+
+@media (width < 70rem) {
+	.user-information-form {
+		margin: auto;
+		margin-top: 0rem;
+		width: 80vw;
+		box-sizing: content-box;
+	}
+
+	.client-details {
+		box-sizing: content-box;
+	}
+
+	.user-information-form fieldset {
+		box-sizing: border-box;
+	}
+
+	.form-row {
+		display: block;
+	}
+
+	.form-row input[type=text] {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.form-row input[type=tel] {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+}
+
