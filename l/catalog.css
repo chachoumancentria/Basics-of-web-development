@@ -3,6 +3,110 @@
  * Date: 2025-11-27
  */
 
+/* --- Hero Section --- */
+.hero {
+	padding-top: 7.75vw;
+	padding-bottom: 7.75vw;
+	background-image: url("media/title_image.png");
+	background-repeat: no-repeat;
+	background-size: 170%;
+	background-position: 100% 50%;
+	background-origin: border-box;
+	background-color: #fdfdfd;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 6vh;
+	margin-bottom: 1.25rem;
+	color: white;
+	mix-blend-mode: difference;
+}
+
+.hero p {
+	font-size: 2.6vh;
+	max-width: 40rem;
+	margin: 0 auto 2rem;
+	color: white;
+	mix-blend-mode: difference;
+	padding-left: 1.1rem;
+	padding-right: 1.1rem;
+}
+
+.cta-btn {
+	position: relative;
+	top: 4vh;
+	display: inline-block;
+	background: rgba(var(--shark-rgb), 0.95);
+	color: white;
+	padding: 1rem 2rem;
+	border-color: transparent;
+	border-radius: 6px;
+	font-size: 1.1rem;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.cta-btn:hover {
+	box-shadow: 0 0.5rem 0 rgba(var(--shark-rgb), 0.5);
+	transform: translateY(-0.17rem);
+}
+
+
+/* --- Section shading --- */
+.shade-light {
+	background-color: #fdfdfd;
+	box-shadow: 0 1.2rem 0 var(--shark);
+	margin: auto;
+}
+
+.shade-light p {
+	font-size: 1.6rem;
+	width: 100%;
+	margin: auto;
+}
+
+.shade-mid {
+	background-color: #b4c6d1ad;
+
+	background-image: url("media/title_image2.png");
+	background-repeat: no-repeat;
+	padding: 3.5rem;
+}
+
+.bg1 {
+	background-image: url("media/title_image2.png");
+	background-size: 150%;
+	background-position: 0% 100%;
+	background-origin: border-box;
+}
+
+.bg2 {
+	background-color: #73a0ba9e;
+	background-image: url("media/bg_frame.png");
+	background-size: 97% 97%;
+	background-position: 0 100%;
+	background-origin: border-box;
+	padding-bottom: 9rem;
+	box-shadow: 0 -1.2rem 0 rgba(var(--shark-rgb), 0.65);
+}
+
+.bg2 h1 {
+	padding-top: 6rem;
+}
+
+.shade-mid h1 {
+	text-align: center;
+	margin-bottom: 0.3rem;
+}
+
+.shade-mid p {
+	font-size: 1.6rem;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
 
 /* --- Product Cards --- */
 .products {
