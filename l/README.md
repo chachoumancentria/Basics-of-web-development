@@ -9,7 +9,7 @@ task-K : Error in validation: https://validator.w3.org/nu/?doc=https%3A%2F%2Fcha
           Responsiveness is lacking — elements become uneven in width when the viewport is reduced.
 
 ## What we changed
-Considering the feedbacks we got, we focused on making the webpage clean and correct, and on the responsivness.
+Considering the feedbacks we got, we focused on the responsivness, and on making the webpage clean and correct.
 
 We also had a lot of work to do on changing the links, to use relative links instead of static links, because we used a **LOT** of them. 
 Same for the images, as our website uses a ton of them, especially in the catalog part.
