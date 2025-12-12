@@ -26,8 +26,7 @@
 /* Global */
 * {
 	cursor:
-		url("../task-k/media/shark_cursor.png") 0 30,
-		auto; /* CONFLICT: un fichier utilisait "media/shark_cursor.png" (chemin différent). J'ai choisi ../task-k/media/ */
+		url("media/shark_cursor.png") 0 30, auto;
 	scroll-behavior: smooth;
 }
 
@@ -45,9 +44,7 @@ body {
 	padding: 0.5rem 0rem 1.5rem 0rem;
 	margin-bottom: 0rem;
 	width: 100%;
-	/* CONFLICT: z-index était 9999 (fichier 2025-11-14) vs 5 (fichiers 2025-11-27).
-	   J'ai choisi 9999 pour préserver visibilité/front stacking. */
-	z-index: 9999;
+	z-index: 5;
 	background-size: 100% 100%;
 	height: 6vh;
 }
@@ -208,14 +205,13 @@ h1,
 h2 {
 	margin-top: 0;
 	font-weight: 700;
-	/* CONFLICT: certains fichiers avaient 'size: 2rem' (propriété invalide CSS) — je l'ai retirée. */
 }
 
 /* --- Hero Section --- */
 .hero {
 	padding-top: 7.75vw;
 	padding-bottom: 7.75vw;
-	background-image: url("../task-k/media/title_image.png");
+	background-image: url("media/title_image.png");
 	background-repeat: no-repeat;
 	background-size: 170%;
 	background-position: 100% 50%;
@@ -249,8 +245,6 @@ h2 {
 	background: rgba(var(--shark-rgb), 0.95);
 	color: white;
 	padding: 1rem 2rem;
-	/* CONFLICT: certains fichiers utilisaient `border: none`, d'autres `border-color: transparent`. 
-	   Valeur choisie: garder proprement uniquement border-color pour compatibilité avec outlines */
 	border-color: transparent;
 	border-radius: 6px;
 	font-size: 1.1rem;
@@ -285,20 +279,20 @@ h2 {
 
 .shade-mid {
 	background-color: #b4c6d1ad;
-	background-image: url("../task-k/media/title_image2.png");
+	background-image: url("media/title_image2.png");
 	background-repeat: no-repeat;
 	padding: 3.5rem;
 }
 
 .bg1 {
-	background-image: url("../task-k/media/title_image2.png");
+	background-image: url("media/title_image2.png");
 	background-size: 150%;
 	background-position: 0% 100%;
 	background-origin: border-box;
 }
 .bg2 {
 	background-color: #73a0ba9e;
-	background-image: url("../task-k/media/bg_frame.png");
+	background-image: url("media/bg_frame.png");
 	background-size: 97% 97%;
 	background-position: 0 100%;
 	background-origin: border-box;
