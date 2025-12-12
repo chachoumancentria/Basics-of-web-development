@@ -252,6 +252,14 @@ body {
 	z-index: 9999;
 }
 
+/* --- Footer --- */
+footer {
+	background: #1a1a1a;
+	color: #dddddd;
+	text-align: center;
+	padding: 40px 20px;
+	font-size: 0.9rem;
+}
 
 @media (orientation: portrait) {
 	.shade-mid {
