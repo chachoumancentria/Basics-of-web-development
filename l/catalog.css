@@ -129,7 +129,7 @@
 	background: rgba(0, 0, 0, 0);
 	overflow: visible;
 	text-align: center;
-	width: 100%;
+	width: 80%;
 	aspect-ratio: 2/3;
 	perspective: 250rem;
 }
