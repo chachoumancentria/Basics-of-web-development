@@ -1,22 +1,13 @@
 /*
- * Merged CSS
- * Sources: 2025-11-14, 2025-11-27 (x2)
- *
- * Notes:
- * - Quand un merge conflict était incertain j'ai laissé un commentaire "CONFLICT" expliquant les choix.
- * - Préférence générale : utiliser les valeurs plus récentes (2025-11-27) sauf mention contraire.
+ * Authors: Nassim Boudekhani & Joseph Couprie
+ * Date: 2025-12-12
  */
 
 /* --- Global Style --- */
 :root {
 	--shark: #3a4f5c;
-	/* Plusieurs fichiers utilisaient rgb(...) et une forme "raw numbers". 
-	   J'ai choisi d'exposer la version "raw numbers" utile pour rgba(...) : */
-	--shark-rgb: 75, 110, 135; /* chosen from files (some used rgb(74, 113, 139) vs "75, 110, 135") */
-	/* CONFLICT: certains fichiers utilisaient 'rgb(74, 113, 139)' littéral. 
-	   Si tu préfères conserver la fonction rgb(...) pour réutilisation, remplace la ligne ci-dessus par:
-	   --shark-rgb: 74, 113, 139; */
-	--shark-hsl: 205; /* , 28.6%, 41.2%; */
+	--shark-rgb: 75, 110, 135;
+	--shark-hsl: 205;
 	--shark-white: #e3e2dd;
 
 	--section-header-size: 1.7rem;
@@ -242,7 +233,6 @@ h2 {
 .popup-content {
 	background-color: #dddddd;
 	position: absolute;
-	/* CONFLICT: position/width différaient ; j'ai choisi une solution flexible centrée */
 	--popup-width: 40vw;
 	--popup-height: 40vh;
 	width: var(--popup-width);
