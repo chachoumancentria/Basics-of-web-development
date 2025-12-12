@@ -1,0 +1,381 @@
+<!doctype html>
+
+<!--
+Authors: Nassim Boudekhani & Joseph Couprie
+Date: 2025-11-27
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blåhaj Rental – Bring the Shark Home</title>
+	<link rel="icon" href="../task-k/media/shark_cursor.png" type="image/png">
+	<link rel="stylesheet" href="style.css">
+	<script src="../task-k/cart.js"></script>
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<header class="navbar">
+		<a id="logo" href="/Basics-of-web-development/task-i/">
+			<img src="../task-k/media/shark_cursor.png" alt="">
+			<span>Blåhaj Rental</span>
+		</a>
+
+		<a href="../task-k/index.html" id="cart-navigation-shortcut">
+			<img src="../task-k/media/shopping-cart.png" alt="shopping cart">
+		</a>
+
+		<div class="desktop">
+			<div class="navbar-links">
+				<div class="navbar-element">
+					<span class="dropdown">Blåhaj discovery</span>
+
+					<div class="dropdown-content">
+						<h3>What is Blåhaj?</h3>
+						<a href="">Origins of Blåhaj</a><br>
+						<a href="">Cuteness studies</a><br>
+						<a href="">Latest Blåhaj news</a><br>
+						<br>
+
+						<h3>Official links</h3>
+						<a target="_blank" href="https://www.ikea.com/us/en/p/blahaj-soft-toy-shark-90373590/">IKEA
+							Blåhaj</a><br>
+						<a target="_blank" href="https://en.wikipedia.org/wiki/Bl%C3%A5haj">Blåhaj wiki</a><br>
+					</div>
+				</div>
+				<div class="navbar-element">
+					<span class="dropdown">Products</span>
+
+					<div class="dropdown-content" style="translate: -2.5rem">
+						<h3>Our sharks</h3>
+						<a href="/Basics-of-web-development/task-j/">Finnish Blåhaj</a><br>
+						<a href="/Basics-of-web-development/task-j/">Pink Blåhaj</a><br>
+						<a href="/Basics-of-web-development/task-j/">Rainbow Blåhaj</a><br>
+						<a href="/Basics-of-web-development/task-j/">Blåhaj army</a><br>
+						<a href="/Basics-of-web-development/task-j/">Evil Blåhaj</a><br>
+						<a href="/Basics-of-web-development/task-j/">BlåhaJr</a><br>
+						<a href="/Basics-of-web-development/task-j/">See all</a><br>
+						<br>
+
+						<h3>Seasonal deals</h3>
+						<a href="/Basics-of-web-development/task-j/">Haloween Blåhaj</a><br>
+						<a href="/Basics-of-web-development/task-j/">Christmas Blåhaj</a><br>
+						<a href="/Basics-of-web-development/task-j/">Valentine Blåhaj</a><br>
+					</div>
+				</div>
+				<div class="navbar-element">
+					<span class="dropdown">About Us</span>
+
+					<div class="dropdown-content" style="translate: -2.5rem">
+						<h3>Misc</h3>
+						<a href="info/news/">Latest news</a><br>
+						<a href="info/ToS/">Terms of use</a><br>
+						<a href="info/privacy/">Privacy policy</a><br>
+						<br>
+
+						<h3>Contact Us</h3>
+						<a href="info/customer_support/">Customer support</a><br>
+						<a href="info/QnA/">Q & A</a><br>
+						<a href="info/partners/">Become a partner</a><br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobile">
+			<div class="navbar-element hamburger">
+				<img src="../task-k/media/hamburger-button.png" alt="">
+				<div class="dropdown-content">
+					<div class="navbar-element">
+						<span class="dropdown">Blåhaj discovery</span>
+
+						<div class="dropdown-content">
+							<h3>What is Blåhaj?</h3>
+							<a href="">Origins of Blåhaj</a><br>
+							<a href="">Cuteness studies</a><br>
+							<a href="">Latest Blåhaj news</a><br>
+							<br>
+
+							<h3>Official links</h3>
+							<a target="_blank" href="https://www.ikea.com/us/en/p/blahaj-soft-toy-shark-90373590/">IKEA
+								Blåhaj</a><br>
+							<a target="_blank" href="https://en.wikipedia.org/wiki/Bl%C3%A5haj">Blåhaj wiki</a><br>
+						</div>
+					</div>
+
+					<div class="vertical-spacer"></div>
+
+					<div class="navbar-element">
+						<span class="dropdown">Products</span>
+
+						<div class="dropdown-content" style="translate: -2.5rem">
+							<h3>Our sharks</h3>
+							<a href="/Basics-of-web-development/task-j/">Finnish Blåhaj</a><br>
+							<a href="/Basics-of-web-development/task-j/">Pink Blåhaj</a><br>
+							<a href="/Basics-of-web-development/task-j/">Rainbow Blåhaj</a><br>
+							<a href="/Basics-of-web-development/task-j/">Blåhaj army</a><br>
+							<a href="/Basics-of-web-development/task-j/">Evil Blåhaj</a><br>
+							<a href="/Basics-of-web-development/task-j/">BlåhaJr</a><br>
+							<a href="/Basics-of-web-development/task-j/">See all</a><br>
+							<br>
+
+							<h3>Seasonal deals</h3>
+							<a href="/Basics-of-web-development/task-j/">Haloween Blåhaj</a><br>
+							<a href="/Basics-of-web-development/task-j/">Christmas Blåhaj</a><br>
+							<a href="/Basics-of-web-development/task-j/">Valentine Blåhaj</a><br>
+						</div>
+					</div>
+
+					<div class="vertical-spacer"></div>
+
+					<div class="navbar-element">
+						<span class="dropdown">About Us</span>
+
+						<div class="dropdown-content" style="translate: -2.5rem">
+							<h3>Misc</h3>
+							<a href="info/news/">Latest news</a><br>
+							<a href="info/ToS/">Terms of use</a><br>
+							<a href="info/privacy/">Privacy policy</a><br>
+							<br>
+
+							<h3>Contact Us</h3>
+							<a href="info/customer_support/">Customer support</a><br>
+							<a href="info/QnA/">Q & A</a><br>
+							<a href="info/partners/">Become a partner</a><br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<a href="#"><img id="back-to-top" src="../task-k/media/chevron_up_arrow.png" alt="go back to top of the page"></a>
+	<div class="main-content-wrapper">
+
+		<main>
+			<!-- ABOUT -->
+			<!--<section class="shade-light">
+				<div class="about">
+					<h1>About Blåhaj Rentals</h1>
+					<p>
+						We provide high-quality Blåhaj plush sharks for every occasion. Whether you need one for a
+						photoshoot, a week of cuddles, or a themed event, we deliver comfort and personality straight to
+						your door.
+					</p>
+				</div>
+
+				<!- VIDEO ->
+				<div class="video-section">
+					<video controls>
+						<source src="../task-k/media/video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</section>-->
+
+			<!-- PRODUCT HIGHLIGHTS -->
+			<section class="shade-mid bg1" id="hero-sub-section">
+				<h1 id="products">Our Sharks</h1>
+				<p>(Click on a card to see more)</p>
+
+				<div class="products">
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/finnish_blahaj.jpeg" alt="Finnish Blåhaj" loading="lazy">
+								<h3>Finnish Blåhaj</h3>
+								<p>Ulkona alkaa kylmetä, vuokraa söpö seuralainen, joka on suojassa kylmältä!</p>
+							</div>
+							<div class="card-back">
+								<p>
+									Born in the land of calm forests and cold winds, this Blåhaj loves going outside in
+									the snow.<br>
+									He’s warm, fluffy, and always ready to keep you company when the temperature
+									drops.<br>
+									Perfect companion for your late night aurora watching.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["finnish",1,1]);'>23 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/pink_blahaj.png" alt="Pink Blåhaj" loading="lazy">
+								<h3>Pink Blåhaj</h3>
+								<p>Soft, sweet, and more importantly, PINK. Ready to brighten your day.</p>
+							</div>
+							<div class="card-back">
+								<p>
+									Bright, charming, and endlessly huggable.<br>
+									Pink Blåhaj brings a soft energy to any room and loves being featured in
+									photoshoots, date nights, or aesthetic setups.<br>
+									If you want comfort with a touch of sweetness, this is your shark.<br>
+									Be careful! It's <b style="color: #fecccb"><u>PINK</u></b>.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["pink",1,1]);'>17 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/rainbow_blahaj.png" alt="Rainbow Blåhaj" loading="lazy">
+								<h3>Rainbow Blåhaj</h3>
+								<p>Colorful, joyful, and impossible to ignore.</p>
+							</div>
+							<div class="card-back">
+								<p>
+									A celebration of color and personality!<br>
+									Rainbow Blåhaj is bold, expressive, and impossible not to smile at.<br>
+									Great for pride events, decorations, or simply lifting the mood at home.<br>
+									Wherever this shark goes, joy follows.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["rainbow",1,1]);'>20 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/blahaj_army.png" alt="Blåhaj Army" loading="lazy">
+								<h3>Blåhaj Army</h3>
+								<p>
+									Not one, not two, but <b><u>6</u></b> blåhaj, for the times when one is not enough.
+								</p>
+							</div>
+							<div class="card-back">
+								<p>
+									Strong in numbers, the Blåhaj Army marches with fluffy determination.<br>
+									They’re coordinated, motivated, and surprisingly cuddly for a unit of plush
+									soldiers.<br>
+									Ideal for group photos, themed events, or creating your own adorable shark platoon.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["army",1,1]);'>55 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/evil_blahaj.png" alt="Evil Blåhaj" loading="lazy">
+								<h3>Evil Blåhaj</h3>
+								<p>A mischievous troublemaker who loves harmless chaos and sneaky fun</p>
+							</div>
+							<div class="card-back">
+								<p>
+									He hides your socks, rearranges your room just enough to confuse you, and stares at
+									you like he is planning something.<br>
+									Despite the pranks he never crosses the line and keeps things lighthearted.<br>
+									Adopt him if you are ready for daily surprises and unexpected laughter.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["evil",1,1]);'>16,66 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/blahajr.png" alt="BlåhaJr" loading="lazy">
+								<h3>BlåhaJr</h3>
+								<p>A portable version ideal for travel, gaming setups, and office desks.</p>
+							</div>
+							<div class="card-back">
+								<p>
+									Small in size but big in personality.<br>
+									BlåhaJr slips easily into backpacks, offices, cars, or gaming setups.<br>
+									He loves travelling, watching movies with you, and sitting proudly on any
+									desk.<br>
+									The ideal shark for people on the go.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["junior",1,1]);'>10 €/Week</button>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="shade-mid bg2" id="seasonal">
+				<h1 class="seasonal_blahaj">Seasonal Blåhaj</h1>
+				<p>(Click on a card to see more)</p>
+
+				<div class="products">
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/halloween_blahaj.png" alt="Halloween Blåhaj" loading="lazy">
+								<img src="../task-k/media/halloween_frame.png" alt="" style="position:absolute; top:0; left:0">
+								<h3>Halloween Blåhaj</h3>
+								<p>A playful shark in a funny costume ready for spooky fun</p>
+							</div>
+							<div class="card-back">
+								<p>
+									This Blåhaj takes Halloween adorably seriously.<br>
+									Every year he chooses a new costume and wears it with confidence.<br>
+									He loves decorating, posing for photos, and surprising visitors.<br>
+									The perfect partner for trick or treating, cozy fall nights, and creative costume
+									fun.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["haloween",1,1]);'>27 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/christmas_blahaj.png" alt="Christmas Blåhaj" loading="lazy">
+								<img src="../task-k/media/xmas_frame.png" alt="" style="position:absolute; top:0; left:0">
+								<h3>Christmas Blåhaj</h3>
+								<p>A cozy holiday shark bringing warm lights and festive charm</p>
+							</div>
+							<div class="card-back">
+								<p>
+									This Blåhaj is wrapped in winter magic.<br>
+									He loves sparkling decorations, soft blankets, and anything that makes a home
+									glow.<br>
+									He helps set up lights, guards your presents, and fills the room with calm
+									joy.<br>
+									Perfect for a peaceful holiday companion or seasonal decoration.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["christmas",1,1]);'>32 €/Week</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="../task-k/media/valentine_blahaj.png" alt="Valentine Blåhaj" loading="lazy">
+								<img src="../task-k/media/love_frame.png" alt="" style="position:absolute; top:0; left:0">
+								<h3>Valentine Blåhaj</h3>
+								<p>A cuddly companion for cozy moments and self-love days.</p>
+							</div>
+							<div class="card-back">
+								<p>
+									Soft, romantic, and full of charm.<br>
+									This Blåhaj is perfect for adding a warm, loving atmosphere to your space.<br>
+									He spreads cozy vibes wherever he swims.<br>
+									He’s also the perfect companion for spending Valentine’s Day on your own.
+								</p>
+								<button class="cta-btn" onclick='addCartItem(["valentine",1,1]);'>7 €/Day</button>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+		</main>
+	</div>
+	<!-- FOOTER -->
+	<footer><img src="../task-k/media/example.jpg" height="40" style="position:static; left: 50px; bottom: -50px; display: block;"
+			alt="required example image">© 2025 Blåhaj Rental Company — Dive Into Comfort</footer>
+</body>
+
+</html>
