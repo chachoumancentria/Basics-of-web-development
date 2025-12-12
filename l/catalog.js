@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				document.querySelector("body").appendChild(popup);
 				
 				document.querySelector("#popup-see-cart-button").addEventListener("click", () => {
-					document.location = "/Basics-of-web-development/task-k";
+					document.location = "order.html";
 				});
 
 				document.querySelector("#popup-keep-browsing-button").addEventListener("click", () => {
