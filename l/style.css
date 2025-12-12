@@ -241,6 +241,16 @@ body {
 	transform: translateY(-0.17rem);
 }
 
+#back-to-top {
+	visibility: visible;
+	position: fixed;
+	right: 3rem;
+	bottom: -4rem;
+	mix-blend-mode: difference;
+	filter: invert();
+	height: 4rem;
+	z-index: 9999;
+}
 
 
 @media (orientation: portrait) {
