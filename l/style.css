@@ -249,7 +249,7 @@ body {
 	mix-blend-mode: difference;
 	filter: invert();
 	height: 4rem;
-	z-index: 9999;
+	z-index: 5;
 }
 
 /* --- Footer --- */
